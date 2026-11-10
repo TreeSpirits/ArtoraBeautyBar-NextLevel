@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Artora Beauty Bar | Hair Salon &amp; Master Colorist in Tenafly, NJ</title>
   <meta name="description" content="Master colorist Ayfer Deniz's private hair salon in Tenafly, NJ, formerly Ayfer Salon. Balayage, blonding, precision cuts and extensions. Book online.">
   <link rel="canonical" href="https://artorabeautybar.com/">
-  <meta name="theme-color" content="#191412">
+  <meta name="theme-color" content="#1B100A">
   <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -54,7 +54,8 @@
     "founder": {
       "@type": "Person",
       "name": "Ayfer Deniz",
-      "jobTitle": "Founder & Master Colorist"
+      "jobTitle": "Founder & Master Colorist",
+      "sameAs": ["https://www.instagram.com/ayfer_hair"]
     },
     "sameAs": [
       "https://www.instagram.com/artorabeautybar/",
@@ -65,2282 +66,675 @@
   </script>
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
 
-  <!-- Editorial Typography (self-hosted, Latin subset) -->
-  <link rel="preload" href="fonts/cormorant-garamond-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/plus-jakarta-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <style>
-    @font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 400; font-display: swap; src: url(fonts/cormorant-garamond-latin-400-normal.woff2) format('woff2'); }
-    @font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 500; font-display: swap; src: url(fonts/cormorant-garamond-latin-500-normal.woff2) format('woff2'); }
-    @font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 600; font-display: swap; src: url(fonts/cormorant-garamond-latin-600-normal.woff2) format('woff2'); }
-    @font-face { font-family: 'Cormorant Garamond'; font-style: italic; font-weight: 400; font-display: swap; src: url(fonts/cormorant-garamond-latin-400-italic.woff2) format('woff2'); }
-    @font-face { font-family: 'Cormorant Garamond'; font-style: italic; font-weight: 600; font-display: swap; src: url(fonts/cormorant-garamond-latin-600-italic.woff2) format('woff2'); }
-    @font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400; font-display: swap; src: url(fonts/plus-jakarta-sans-latin-400-normal.woff2) format('woff2'); }
-    @font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 500; font-display: swap; src: url(fonts/plus-jakarta-sans-latin-500-normal.woff2) format('woff2'); }
-    @font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 600; font-display: swap; src: url(fonts/plus-jakarta-sans-latin-600-normal.woff2) format('woff2'); }
-  </style>
-
-  <style>
-    /* ----------------------------------------------------
-       DESIGN TOKENS & RESET
-    ---------------------------------------------------- */
-    :root {
-      --bg-canvas: #FAF7F2;
-      --bg-surface: #FFFFFF;
-      --bg-subtle: #F3ECE1;
-      --ink-primary: #191412;
-      --ink-secondary: #5C534E;
-      --ink-muted: #71665D;
-      --accent-ink: #7D603A; /* champagne darkened for small text on light backgrounds */
-      --accent-champagne: #A6865A;
-      --accent-terracotta: #A6865A;
-      --border-sand: #E7DFD3;
-      --border-subtle: rgba(25, 20, 18, 0.08);
-
-      --font-serif: 'Cormorant Garamond', Georgia, serif;
-      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-
-      --ease-editorial: cubic-bezier(0.16, 1, 0.3, 1);
-      --transition-standard: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-      --max-width: 1240px;
-    }
-
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      background-color: var(--bg-canvas);
-      color: var(--ink-primary);
-      font-family: var(--font-sans);
-      font-size: 16px;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    body {
-      overflow-x: hidden;
-      line-height: 1.65;
-    }
-
-    img, video {
-      display: block;
-      max-width: 100%;
-      height: auto;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-      transition: color var(--transition-standard);
-    }
-
-    /* ----------------------------------------------------
-       SCROLL REVEAL ANIMATIONS
-    ---------------------------------------------------- */
-    .reveal-on-scroll {
-      opacity: 0;
-      transform: translateY(26px);
-      transition: opacity 0.8s var(--ease-editorial), transform 0.8s var(--ease-editorial);
-      will-change: opacity, transform;
-    }
-
-    .reveal-on-scroll.is-visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* ----------------------------------------------------
-       TOP ANNOUNCEMENT BAR
-    ---------------------------------------------------- */
-    .top-utility {
-      background-color: var(--ink-primary);
-      color: #E8E2D8;
-      font-size: 0.8rem;
-      letter-spacing: 0.03em;
-      padding: 0.55rem 1.5rem;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .top-utility-inner {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
-
-    .top-utility a {
-      color: #FFF;
-      opacity: 0.85;
-    }
-    .top-utility a:hover {
-      opacity: 1;
-      color: var(--accent-champagne);
-    }
-
-    /* ----------------------------------------------------
-       NAVIGATION
-    ---------------------------------------------------- */
-    .header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(250, 247, 242, 0.94);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--border-sand);
-    }
-
-    .header-inner {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 1rem 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .brand-logo-wrap {
-      display: flex;
-      align-items: center;
-      gap: 0.85rem;
-    }
-
-    .brand-logo-img {
-      height: 38px;
-      width: auto;
-      object-fit: contain;
-    }
-
-    .logo-text-wrap {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .logo-title {
-      font-family: var(--font-serif);
-      font-size: 1.55rem;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      line-height: 1;
-    }
-
-    .logo-subtitle {
-      font-size: 0.65rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--ink-muted);
-      margin-top: 3px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-      align-items: center;
-    }
-
-    .nav-links a {
-      font-size: 0.84rem;
-      font-weight: 500;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: var(--ink-secondary);
-      position: relative;
-      padding-bottom: 3px;
-    }
-
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0%;
-      height: 1px;
-      background-color: var(--accent-champagne);
-      transition: width var(--transition-standard);
-    }
-
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-    .btn-booking {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background-color: var(--ink-primary);
-      color: #FAF7F2;
-      font-size: 0.82rem;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 0.75rem 1.5rem;
-      border-radius: 999px;
-      border: 1px solid var(--ink-primary);
-      transition: all var(--transition-standard);
-    }
-
-    .btn-booking:hover {
-      background-color: var(--accent-champagne);
-      border-color: var(--accent-champagne);
-      color: #FFFFFF;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(166, 134, 90, 0.28);
-    }
-
-    .btn-outline {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: transparent;
-      color: var(--ink-primary);
-      font-size: 0.82rem;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 0.75rem 1.5rem;
-      border-radius: 999px;
-      border: 1px solid var(--border-sand);
-      transition: all var(--transition-standard);
-    }
-
-    .btn-outline:hover {
-      border-color: var(--ink-primary);
-      background-color: rgba(25, 20, 18, 0.03);
-    }
-
-    /* ----------------------------------------------------
-       HERO
-    ---------------------------------------------------- */
-    .hero {
-      padding: 4rem 1.5rem 5rem;
-      position: relative;
-    }
-
-    .hero-container {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 4rem;
-      align-items: center;
-    }
-
-    .hero-eyebrow {
-      display: inline-block;
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--accent-champagne);
-      margin-bottom: 1.25rem;
-    }
-
-    .hero-title {
-      font-family: var(--font-serif);
-      font-size: clamp(2.4rem, 4.4vw, 4.2rem);
-      font-weight: 400;
-      line-height: 1.12;
-      color: var(--ink-primary);
-      margin-bottom: 1.5rem;
-    }
-
-    .hero-title em {
-      font-style: italic;
-      color: var(--accent-terracotta);
-      font-weight: 400;
-    }
-
-    .hero-desc {
-      font-size: 1.05rem;
-      color: var(--ink-secondary);
-      max-width: 530px;
-      margin-bottom: 2.25rem;
-      line-height: 1.7;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-bottom: 3rem;
-    }
-
-    .hero-stats {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--border-sand);
-    }
-
-    .stat-item strong {
-      display: block;
-      font-family: var(--font-serif);
-      font-size: 1.85rem;
-      font-weight: 500;
-      color: var(--ink-primary);
-      line-height: 1.1;
-    }
-
-    .stat-item span {
-      font-size: 0.76rem;
-      color: var(--ink-muted);
-      letter-spacing: 0.02em;
-    }
-
-    .hero-media-wrapper {
-      position: relative;
-    }
-
-    /* Arch frame (from index.html) */
-    .hero-main-frame {
-      position: relative;
-      border-radius: 220px 220px 6px 6px;
-      overflow: hidden;
-      background-color: var(--bg-subtle);
-      box-shadow: 0 28px 70px rgba(25, 20, 18, 0.12);
-      aspect-ratio: 4 / 5;
-      border: 1px solid rgba(166, 134, 90, 0.45);
-    }
-
-    .hero-main-frame img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: 50% 30%;
-      transform: scale(1.01);
-      transition: transform 1.2s var(--ease-editorial);
-    }
-
-    .hero-main-frame:hover img {
-      transform: scale(1.05);
-    }
-
-    .quote-source {
-      display: block;
-      margin-top: 0.6rem;
-      font-size: 0.72rem;
-      color: var(--ink-muted);
-    }
-
-    .hero-floating-quote {
-      position: absolute;
-      bottom: -25px;
-      left: -30px;
-      background: #FFFFFF;
-      padding: 1.35rem 1.6rem;
-      border-radius: 12px;
-      max-width: 300px;
-      box-shadow: 0 16px 40px rgba(25, 20, 18, 0.1);
-      border: 1px solid var(--border-sand);
-      animation: gentleFloat 6s ease-in-out infinite;
-    }
-
-    @keyframes gentleFloat {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-6px); }
-    }
-
-    .quote-badge {
-      font-size: 0.65rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      font-weight: 600;
-      color: var(--accent-champagne);
-      display: block;
-      margin-bottom: 0.4rem;
-    }
-
-    .quote-text {
-      font-family: var(--font-serif);
-      font-size: 1.05rem;
-      font-style: italic;
-      color: var(--ink-primary);
-      line-height: 1.35;
-    }
-
-    /* ----------------------------------------------------
-       TICKER
-    ---------------------------------------------------- */
-    .ticker {
-      background-color: var(--bg-subtle);
-      border-top: 1px solid var(--border-sand);
-      border-bottom: 1px solid var(--border-sand);
-      padding: 1rem 0;
-      overflow: hidden;
-      white-space: nowrap;
-      display: flex;
-    }
-
-    .ticker-track {
-      display: flex;
-      gap: 3rem;
-      animation: tickerLoop 32s linear infinite;
-    }
-
-    .ticker-item {
-      display: inline-flex;
-      align-items: center;
-      gap: 1.25rem;
-      font-family: var(--font-serif);
-      font-size: 1.2rem;
-      font-style: italic;
-      color: var(--ink-secondary);
-    }
-
-    .ticker-item .glyph {
-      color: var(--accent-champagne);
-      font-style: normal;
-      font-size: 0.85rem;
-    }
-
-    @keyframes tickerLoop {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-
-    /* ----------------------------------------------------
-       FINE ART PILLARS
-    ---------------------------------------------------- */
-    .section-padding {
-      padding: 6rem 1.5rem;
-    }
-
-    .container {
-      max-width: var(--max-width);
-      margin: 0 auto;
-    }
-
-    .section-header {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto 3.75rem;
-    }
-
-    .section-eyebrow {
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--accent-champagne);
-      display: block;
-      margin-bottom: 0.75rem;
-    }
-
-    .section-title {
-      font-family: var(--font-serif);
-      font-size: clamp(2rem, 3.5vw, 3.2rem);
-      font-weight: 400;
-      line-height: 1.2;
-      color: var(--ink-primary);
-      margin-bottom: 1rem;
-    }
-
-    .section-title em {
-      font-style: italic;
-      color: var(--accent-terracotta);
-    }
-
-    .section-intro {
-      font-size: 1rem;
-      color: var(--ink-secondary);
-    }
-
-    .philosophy-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-    }
-
-    .pillar-card {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-sand);
-      border-radius: 14px;
-      padding: 2.5rem 2rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: transform var(--transition-standard), box-shadow var(--transition-standard), border-color var(--transition-standard);
-    }
-
-    .pillar-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 18px 40px rgba(25, 20, 18, 0.06);
-      border-color: var(--accent-champagne);
-    }
-
-    .pillar-title {
-      font-family: var(--font-serif);
-      font-size: 1.55rem;
-      font-weight: 500;
-      color: var(--ink-primary);
-      margin-bottom: 0.85rem;
-    }
-
-    .pillar-text {
-      color: var(--ink-secondary);
-      font-size: 0.94rem;
-      line-height: 1.65;
-      margin-bottom: 1.75rem;
-    }
-
-    .pillar-tag {
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      font-weight: 600;
-      color: var(--accent-terracotta);
-      border-top: 1px solid var(--border-subtle);
-      padding-top: 1rem;
-    }
-
-    /* ----------------------------------------------------
-       MEET AYFER DENIZ
-    ---------------------------------------------------- */
-    .bio-section {
-      background-color: var(--bg-subtle);
-      border-top: 1px solid var(--border-sand);
-      border-bottom: 1px solid var(--border-sand);
-    }
-
-    .bio-container {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 4.5rem;
-      align-items: center;
-    }
-
-    .bio-portrait-frame {
-      position: relative;
-    }
-
-    .bio-image-box {
-      border-radius: 16px;
-      overflow: hidden;
-      aspect-ratio: 4/5;
-      box-shadow: 0 24px 50px rgba(25, 20, 18, 0.1);
-      position: relative;
-      background: #DCD4C7;
-    }
-
-    .bio-image-box img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .bio-caption-tag {
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
-      right: 20px;
-      background: rgba(25, 20, 18, 0.9);
-      backdrop-filter: blur(8px);
-      color: #FAF7F2;
-      padding: 1rem 1.25rem;
-      border-radius: 10px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .bio-caption-tag strong {
-      display: block;
-      font-family: var(--font-serif);
-      font-size: 1.1rem;
-      font-weight: 400;
-    }
-
-    .bio-caption-tag span {
-      font-size: 0.72rem;
-      color: #D3CBC0;
-    }
-
-    .bio-quote-highlight {
-      font-family: var(--font-serif);
-      font-size: 1.35rem;
-      font-style: italic;
-      color: var(--ink-primary);
-      border-left: 2px solid var(--accent-champagne);
-      padding-left: 1.5rem;
-      margin: 1.5rem 0 2rem;
-      line-height: 1.45;
-    }
-
-    .bio-narrative p {
-      color: var(--ink-secondary);
-      font-size: 0.97rem;
-      line-height: 1.75;
-      margin-bottom: 1.25rem;
-    }
-
-    .bio-credentials-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.25rem;
-      margin: 2.25rem 0;
-    }
-
-    .credential-card {
-      background: var(--bg-canvas);
-      padding: 1.25rem;
-      border-radius: 10px;
-      border: 1px solid var(--border-sand);
-    }
-
-    .credential-card h3 {
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--ink-primary);
-      margin-bottom: 0.35rem;
-    }
-
-    .credential-card p {
-      font-size: 0.8rem;
-      color: var(--ink-muted);
-      line-height: 1.5;
-      margin: 0;
-    }
-
-    .bio-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      align-items: center;
-    }
-
-    /* ----------------------------------------------------
-       SERVICES MENU
-    ---------------------------------------------------- */
-    .menu-tabs {
-      display: flex;
-      justify-content: center;
-      gap: 0.75rem;
-      margin-bottom: 3rem;
-      flex-wrap: wrap;
-    }
-
-    .tab-btn {
-      background: transparent;
-      border: 1px solid var(--border-sand);
-      padding: 0.65rem 1.35rem;
-      border-radius: 999px;
-      font-family: var(--font-sans);
-      font-size: 0.82rem;
-      font-weight: 500;
-      color: var(--ink-secondary);
-      cursor: pointer;
-      transition: all var(--transition-standard);
-    }
-
-    .tab-btn.active, .tab-btn:hover {
-      background: var(--ink-primary);
-      color: #FFF;
-      border-color: var(--ink-primary);
-    }
-
-    /* Service cards (content from index.html, styled for this page) */
-    .services-menu-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
-    }
-
-    .service-card {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-sand);
-      border-radius: 14px;
-      padding: 2.25rem 2.25rem 1.75rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: opacity 0.8s var(--ease-editorial), transform 0.8s var(--ease-editorial), border-color var(--transition-standard), box-shadow var(--transition-standard);
-    }
-
-    .service-card:nth-child(even).reveal-on-scroll { transition-delay: 0.08s, 0.08s, 0s, 0s; }
-
-    .service-card.is-visible:hover {
-      border-color: var(--accent-champagne);
-      box-shadow: 0 18px 40px rgba(25, 20, 18, 0.06);
-      transform: translateY(-4px);
-      transition-delay: 0s;
-    }
-
-    .service-category-badge {
-      font-size: 0.68rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--accent-champagne);
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      display: block;
-    }
-
-    .service-card h3 {
-      font-family: var(--font-serif);
-      font-size: 1.6rem;
-      font-weight: 500;
-      line-height: 1.2;
-      color: var(--ink-primary);
-      margin-bottom: 0.85rem;
-    }
-
-    .service-card p {
-      color: var(--ink-secondary);
-      font-size: 0.92rem;
-      line-height: 1.7;
-      margin-bottom: 1.35rem;
-    }
-
-    .service-features {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      list-style: none;
-      margin-bottom: 1.75rem;
-    }
-
-    .service-features li {
-      font-size: 0.76rem;
-      color: var(--ink-secondary);
-      background: var(--bg-canvas);
-      border: 1px solid var(--border-sand);
-      padding: 0.3rem 0.8rem;
-      border-radius: 999px;
-    }
-
-    .service-card-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      padding-top: 1.1rem;
-      border-top: 1px solid var(--border-subtle);
-    }
-
-    .service-note {
-      font-size: 0.76rem;
-      color: var(--ink-muted);
-    }
-
-    .btn-service-book {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--ink-primary);
-      border-bottom: 1px solid var(--ink-primary);
-      padding-bottom: 2px;
-      white-space: nowrap;
-      transition: all var(--transition-standard);
-    }
-
-    .btn-service-book:hover {
-      color: var(--accent-champagne);
-      border-color: var(--accent-champagne);
-    }
-
-    /* ----------------------------------------------------
-       LOOKBOOK (index.html portfolio merged with the editorial cards)
-    ---------------------------------------------------- */
-    .lookbook-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
-
-    .lookbook-item {
-      position: relative;
-      border-radius: 14px;
-      overflow: hidden;
-      background-color: var(--bg-canvas);
-      border: 1px solid var(--border-sand);
-      aspect-ratio: 4 / 5;
-      cursor: pointer;
-    }
-
-    .lookbook-item:focus-visible,
-    .tab-btn:focus-visible {
-      outline: 2px solid var(--accent-champagne);
-      outline-offset: 3px;
-    }
-
-    .lookbook-item img,
-    .lookbook-item video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.8s var(--ease-editorial);
-    }
-
-    .lookbook-item:hover img,
-    .lookbook-item:hover video {
-      transform: scale(1.04);
-    }
-
-    .lookbook-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(25, 20, 18, 0) 50%, rgba(25, 20, 18, 0.72) 100%);
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 1.5rem;
-      pointer-events: none;
-    }
-
-    .lookbook-overlay h3 {
-      font-family: var(--font-serif);
-      font-size: 1.35rem;
-      font-weight: 500;
-      color: #FFFFFF;
-      margin-bottom: 0.15rem;
-    }
-
-    .lookbook-overlay p {
-      font-size: 0.78rem;
-      color: #EFE6D8;
-      letter-spacing: 0.04em;
-    }
-
-    .lookbook-badge {
-      position: absolute;
-      top: 1rem;
-      left: 1rem;
-      background: rgba(250, 247, 242, 0.92);
-      backdrop-filter: blur(8px);
-      color: var(--ink-primary);
-      font-size: 0.64rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      padding: 0.35rem 0.75rem;
-      border-radius: 999px;
-    }
-
-    .video-sound-indicator {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      background: rgba(250, 247, 242, 0.92);
-      color: var(--accent-champagne);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.7rem;
-    }
-
-    .instagram-cta-bar {
-      margin-top: 3.5rem;
-      padding: 2.25rem 2.5rem;
-      background: var(--bg-surface);
-      border: 1px solid var(--border-sand);
-      border-radius: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-    }
-
-    .instagram-cta-text h3 {
-      font-family: var(--font-serif);
-      font-size: 1.8rem;
-      font-weight: 400;
-      color: var(--ink-primary);
-      margin-bottom: 0.25rem;
-    }
-
-    .instagram-cta-text h3 em {
-      font-style: italic;
-      color: var(--accent-terracotta);
-    }
-
-    .instagram-cta-text p {
-      color: var(--ink-secondary);
-      font-size: 0.94rem;
-      max-width: 560px;
-    }
-
-    /* Lightbox (from index.html) */
-    .modal-backdrop {
-      position: fixed;
-      inset: 0;
-      background: rgba(25, 20, 18, 0.78);
-      backdrop-filter: blur(8px);
-      z-index: 999;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 1.5rem;
-    }
-
-    .modal-backdrop.open {
-      display: flex;
-    }
-
-    .modal-content {
-      background: var(--bg-canvas);
-      width: 100%;
-      max-width: 620px;
-      border-radius: 16px;
-      border: 1px solid var(--border-sand);
-      box-shadow: 0 28px 70px rgba(25, 20, 18, 0.2);
-      overflow: hidden;
-      max-height: 92vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .modal-header {
-      padding: 1.1rem 1.5rem;
-      background: var(--bg-subtle);
-      border-bottom: 1px solid var(--border-sand);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-
-    .modal-header h3 {
-      font-family: var(--font-serif);
-      font-size: 1.25rem;
-      font-weight: 500;
-      color: var(--ink-primary);
-    }
-
-    .modal-close {
-      background: none;
-      border: none;
-      color: var(--ink-primary);
-      font-size: 1.7rem;
-      line-height: 1;
-      cursor: pointer;
-    }
-
-    .modal-body {
-      padding: 1rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: var(--bg-subtle);
-    }
-
-    .modal-body img,
-    .modal-body video {
-      max-height: 74vh;
-      max-width: 100%;
-      object-fit: contain;
-      border-radius: 8px;
-    }
-
-    /* ----------------------------------------------------
-       VISIT & SANCTUARY HOURS
-    ---------------------------------------------------- */
-    .visit-card {
-      background: var(--bg-surface);
-      border-radius: 18px;
-      border: 1px solid var(--border-sand);
-      overflow: hidden;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      box-shadow: 0 20px 50px rgba(25, 20, 18, 0.05);
-    }
-
-    .visit-info-pane {
-      padding: 3.5rem;
-    }
-
-    .info-group {
-      margin-bottom: 2rem;
-    }
-
-    .info-group h3 {
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      font-weight: 600;
-      color: var(--accent-champagne);
-      margin-bottom: 0.4rem;
-    }
-
-    .info-group p, .info-group address {
-      font-style: normal;
-      color: var(--ink-secondary);
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-
-    .hours-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.88rem;
-      margin-top: 0.5rem;
-    }
-
-    .hours-table tr {
-      border-bottom: 1px solid var(--border-subtle);
-    }
-
-    .hours-table td {
-      padding: 0.5rem 0;
-      color: var(--ink-secondary);
-    }
-
-    .hours-table td:last-child {
-      text-align: right;
-      font-weight: 500;
-      color: var(--ink-primary);
-    }
-
-    .visit-visual-pane {
-      background-color: var(--bg-subtle);
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      overflow: hidden;
-    }
-
-    .visit-visual-pane img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .visit-overlay-caption {
-      position: relative;
-      z-index: 2;
-      background: linear-gradient(to top, rgba(25, 20, 18, 0.88), transparent);
-      padding: 2.5rem;
-      color: #FAF7F2;
-    }
-
-    .visit-overlay-caption h3 {
-      font-family: var(--font-serif);
-      font-size: 1.8rem;
-      font-weight: 400;
-      font-style: italic;
-    }
-
-    /* ----------------------------------------------------
-       FOOTER
-    ---------------------------------------------------- */
-    .footer {
-      --ink-muted: #8E837A; /* lighter muted tone reads better on the dark footer */
-      background-color: var(--ink-primary);
-      color: #FAF7F2;
-      padding: 4.5rem 1.5rem 2.5rem;
-    }
-
-    .footer-inner {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 2rem;
-      padding-bottom: 3rem;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .footer-bottom {
-      max-width: var(--max-width);
-      margin: 2rem auto 0;
-      display: flex;
-      justify-content: space-between;
-      color: var(--ink-muted);
-      font-size: 0.78rem;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    /* Floating Book Now pill (from index.html) */
-    .floating-book-cta {
-      position: fixed;
-      bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
-      right: calc(1.5rem + env(safe-area-inset-right, 0px));
-      z-index: 90;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      background-color: var(--ink-primary);
-      color: #FAF7F2;
-      border: 1px solid var(--accent-champagne);
-      padding: 0.9rem 1.6rem;
-      border-radius: 999px;
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      box-shadow: 0 14px 34px rgba(25, 20, 18, 0.28);
-      transition: all var(--transition-standard);
-    }
-
-    .floating-book-cta:hover {
-      background-color: var(--accent-champagne);
-      border-color: var(--accent-champagne);
-      color: #FFFFFF;
-      transform: translateY(-3px);
-    }
-
-    /* Instagram icon links */
-    .ig-link { display: inline-flex; align-items: center; gap: 0.4rem; white-space: nowrap; }
-    .ig-icon { width: 1.05em; height: 1.05em; flex: none; }
-    .footer-brand { display: flex; flex-direction: column; gap: 1.25rem; }
-    .footer-ig { color: var(--accent-champagne); font-size: 0.82rem; letter-spacing: 0.06em; transition: color var(--transition-standard); }
-    .footer-ig .ig-icon { width: 1.35em; height: 1.35em; }
-    .footer-ig:hover, .footer-ig:focus-visible { color: #FAF7F2; }
-
-    /* Keep the floating Book Now pill from covering the last footer line */
-    .footer { padding-bottom: calc(6.5rem + env(safe-area-inset-bottom, 0px)) !important; }
-
-    /* ----------------------------------------------------
-       WELCOME SPLASH — Ayfer Salon is now Artora Beauty Bar
-    ---------------------------------------------------- */
-    .welcome-splash {
-      position: fixed; inset: 0; z-index: 200;
-      display: flex; align-items: center; justify-content: center;
-      padding: 1.25rem;
-      background: rgba(25, 20, 18, 0.55);
-      backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
-      opacity: 0; visibility: hidden;
-      transition: opacity 0.5s var(--ease-editorial), visibility 0.5s;
-    }
-    .welcome-splash.open { opacity: 1; visibility: visible; }
-    .welcome-card {
-      position: relative;
-      width: min(560px, 100%);
-      max-height: calc(100vh - 2.5rem); overflow-y: auto;
-      background: var(--bg-canvas);
-      border: 1px solid var(--border-sand);
-      border-radius: 220px 220px 8px 8px;
-      padding: 3.25rem 2.5rem 2.25rem;
-      text-align: center;
-      box-shadow: 0 30px 80px rgba(25, 20, 18, 0.35);
-      transform: translateY(18px) scale(0.98);
-      transition: transform 0.6s var(--ease-editorial);
-    }
-    .welcome-splash.open .welcome-card { transform: none; }
-    .welcome-close {
-      position: absolute; top: calc(1rem + env(safe-area-inset-top, 0px)); right: 1rem; z-index: 1;
-      width: 2.75rem; height: 2.75rem; border-radius: 50%;
-      border: 1px solid var(--border-sand); background: var(--bg-surface);
-      color: var(--ink-secondary); font-size: 1.35rem; line-height: 1; cursor: pointer;
-      transition: all var(--transition-standard);
-    }
-    .welcome-close:hover, .welcome-close:focus-visible { color: var(--ink-primary); border-color: var(--accent-champagne); }
-    .welcome-logos {
-      display: flex; align-items: center; justify-content: center; gap: 1.25rem;
-      margin-bottom: 1.6rem;
-    }
-    .welcome-logos .crest { width: 92px; height: 92px; object-fit: contain; }
-    .welcome-logos .ab { width: 104px; height: auto; }
-    .welcome-arrow { color: var(--accent-champagne); font-size: 1.25rem; letter-spacing: 0.1em; }
-    .welcome-eyebrow {
-      display: block; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.22em;
-      text-transform: uppercase; color: var(--accent-champagne); margin-bottom: 0.8rem;
-    }
-    .welcome-card h2 {
-      font-family: var(--font-serif); font-weight: 400; color: var(--ink-primary);
-      font-size: clamp(1.9rem, 5vw, 2.5rem); line-height: 1.12; margin: 0 0 1rem;
-    }
-    .welcome-card h2 em { font-style: italic; color: var(--accent-champagne); }
-    .welcome-card p { color: var(--ink-secondary); font-size: 0.98rem; line-height: 1.7; margin: 0 auto 1rem; max-width: 30rem; }
-    .welcome-details {
-      margin: 1.4rem auto 1.6rem; padding: 1rem 0; max-width: 26rem;
-      border-top: 1px solid var(--border-sand); border-bottom: 1px solid var(--border-sand);
-      font-size: 0.88rem; color: var(--ink-secondary); line-height: 1.7;
-    }
-    .welcome-details strong { color: var(--ink-primary); font-weight: 600; }
-    .welcome-details a { color: var(--ink-primary); font-weight: 600; }
-    .welcome-note { display: block; margin-top: 0.35rem; font-size: 0.78rem; color: var(--ink-muted); }
-    .welcome-actions { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; }
-    .welcome-btn {
-      display: inline-flex; align-items: center; justify-content: center;
-      padding: 0.95rem 1.7rem; border-radius: 999px; cursor: pointer;
-      font-family: var(--font-sans); font-size: 0.76rem; font-weight: 600;
-      letter-spacing: 0.14em; text-transform: uppercase;
-      transition: all var(--transition-standard);
-    }
-    .welcome-btn.primary { background: var(--ink-primary); color: #FAF7F2; border: 1px solid var(--ink-primary); }
-    .welcome-btn.primary:hover { background: var(--accent-champagne); border-color: var(--accent-champagne); }
-    .welcome-btn.ghost { background: transparent; color: var(--ink-primary); border: 1px solid var(--border-sand); }
-    .welcome-btn.ghost:hover { border-color: var(--accent-champagne); color: var(--accent-champagne); }
-    body.welcome-locked { overflow: hidden; }
-    @media (max-width: 600px) {
-      .welcome-card { border-radius: 140px 140px 8px 8px; padding: 2.6rem 1.4rem 1.6rem; }
-      .welcome-logos .crest { width: 72px; height: 72px; }
-      .welcome-logos .ab { width: 84px; }
-      .welcome-btn { width: 100%; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .welcome-splash, .welcome-card { transition: none; }
-    }
-
-    /* Accessible contrast: darker champagne for small text on light backgrounds */
-    .hero-eyebrow, .section-eyebrow, .quote-badge, .pillar-tag, .service-category-badge,
-    .info-group h3, .welcome-eyebrow, .visit-info-pane .section-eyebrow { color: var(--accent-ink); }
-    .section-title em { color: #9B7C51; }
-
-    /* Phones in portrait: keep the address bar on one line, phone number on its own footer row */
-    @media (max-width: 600px) and (orientation: portrait) {
-      .hide-phone-portrait { display: none; }
-      .footer-bottom .footer-phone { display: block; margin-top: 0.35rem; }
-      .top-utility a { white-space: nowrap; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      .reveal-on-scroll { opacity: 1; transform: none; transition: none; }
-      .ticker-track, .hero-floating-quote { animation: none; }
-    }
-
-    /* ----------------------------------------------------
-       RESPONSIVE
-    ---------------------------------------------------- */
-    @media (max-width: 992px) {
-      .hero-container, .bio-container, .visit-card {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-      }
-      .hero-floating-quote {
-        left: 20px;
-        bottom: 20px;
-      }
-      .philosophy-grid {
-        grid-template-columns: 1fr;
-      }
-      .nav-links {
-        display: none;
-      }
-      .hero-media-wrapper {
-        max-width: 520px;
-        width: 100%;
-        margin: 0 auto;
-      }
-      .services-menu-grid {
-        grid-template-columns: 1fr;
-      }
-      .lookbook-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 640px) {
-      .hero-stats {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .header .btn-booking {
-        padding: 0.65rem 1.1rem;
-      }
-      .logo-text-wrap {
-        display: none;
-      }
-      .service-card {
-        padding: 1.75rem 1.5rem 1.5rem;
-      }
-      .service-card-footer {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .lookbook-grid {
-        grid-template-columns: 1fr;
-      }
-      .instagram-cta-bar {
-        padding: 1.75rem 1.5rem;
-      }
-      .visit-info-pane {
-        padding: 2rem 1.5rem;
-      }
-    }
-  </style>
+  <!-- Typography (self-hosted, Latin subset): Bodoni Moda for display, Jost for text -->
+  <link rel="preload" href="fonts/bodoni-moda-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/jost-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" href="assets/images/posters/hero-dimensional-waves.webp">
+  <link rel="stylesheet" href="css/site.css">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
-<body>
+<body data-tone="dark">
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Opening curtain: the AB mark parts along its band -->
+  <div class="curtain" id="curtain" aria-hidden="true">
+    <div class="curtain-half curtain-top"><div class="curtain-mark"></div></div>
+    <div class="curtain-half curtain-bottom"><div class="curtain-mark"></div></div>
+  </div>
 
   <!-- Welcome splash for clients arriving from ayfersalon.com -->
   <div class="welcome-splash" id="welcomeSplash" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle" hidden>
-    <button type="button" class="welcome-close" id="welcomeClose" aria-label="Close welcome message">&times;</button>
     <div class="welcome-card">
+      <button type="button" class="welcome-close" id="welcomeClose" aria-label="Close welcome message">&times;</button>
       <div class="welcome-logos" aria-hidden="true">
         <img class="crest" src="assets/images/ayfer-salon-crest.webp" alt="" width="92" height="92" loading="lazy">
-        <span class="welcome-arrow">&rarr;</span>
+        <span class="welcome-rule"></span>
         <img class="ab" src="assets/images/logo-dark.png" alt="" width="104" height="54" loading="lazy">
       </div>
-      <span class="welcome-eyebrow">Welcome, Ayfer Salon clients</span>
-      <h2 id="welcomeTitle">Ayfer Salon is now <em>Artora Beauty Bar</em></h2>
-      <p>After 19 years in Closter and several years at Salon Pavel in Tenafly, Ayfer Deniz has opened her own private studio. Same Ayfer, same care &mdash; a new name and a new home.</p>
+      <p class="welcome-kicker">Welcome, Ayfer Salon clients</p>
+      <h2 id="welcomeTitle">Ayfer Salon is now Artora Beauty Bar</h2>
+      <p>After 19 years in Closter and several years at Salon Pavel in Tenafly, Ayfer Deniz has opened her own private studio. Same Ayfer, same care, with a new name and a new home.</p>
       <div class="welcome-details">
         <strong>8 South Summit St, Side Entrance, 2nd Floor</strong><br>
-        Tenafly, NJ 07670 &bull; <a href="tel:+12018461234">(201) 846-1234</a>
+        Tenafly, NJ 07670<br><a href="tel:+12018461234">(201) 846-1234</a>
         <span class="welcome-note">Please use our new number for appointments.</span>
       </div>
       <div class="welcome-actions">
-        <button type="button" class="welcome-btn primary" id="welcomeEnter">Explore Artora</button>
-        <a class="welcome-btn ghost" href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener">Book Now</a>
+        <button type="button" class="btn btn-solid" id="welcomeEnter">Explore Artora</button>
+        <a class="btn btn-line" href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener">Book now</a>
       </div>
     </div>
   </div>
 
-  <!-- Top Announcement Bar -->
-  <aside class="top-utility">
-    <div class="top-utility-inner">
-      <div>
-        <span>✦ 8 South Summit St,<span class="hide-phone-portrait"> Side Entrance,</span> 2nd Floor • Tenafly, NJ</span>
-      </div>
-      <div>
-        <a href="tel:+12018461234">(201) 846-1234</a>
-        <span style="margin: 0 0.5rem; opacity: 0.4;">•</span>
-        <a class="ig-link" href="https://www.instagram.com/artorabeautybar/" target="_blank" rel="noopener" title="Artora Beauty Bar on Instagram"><svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2.75" y="2.75" width="18.5" height="18.5" rx="5.25" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4.25" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17.35" cy="6.65" r="1.15" fill="currentColor"/></svg><span>@artorabeautybar</span></a>
-        <span class="hide-phone-portrait">
-          <span style="margin: 0 0.5rem; opacity: 0.4;">•</span>
-          <a href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener" style="color: #BFA27A;">Book Now</a>
-        </span>
-      </div>
-    </div>
-  </aside>
+  <!-- Header -->
+  <header class="site-header" id="siteHeader">
+    <a href="#top" class="brand" aria-label="Artora Beauty Bar, back to top">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-name">Artora</span>
+    </a>
 
-  <!-- Sticky Header -->
-  <header class="header">
-    <div class="header-inner">
-      <a href="#top" class="brand-logo-wrap" aria-label="Artora Beauty Bar Home">
-        <img src="assets/images/logo-dark.png" alt="Artora Beauty Bar logo" width="438" height="229" class="brand-logo-img">
-        <div class="logo-text-wrap">
-          <span class="logo-title">Artora</span>
-          <span class="logo-subtitle">Beauty Bar • Tenafly</span>
-        </div>
-      </a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="#philosophy">Philosophy</a>
+      <a href="#ayfer">Ayfer</a>
+      <a href="#services">Services</a>
+      <a href="#lookbook">Lookbook</a>
+      <a href="#visit">Visit</a>
+    </nav>
 
-      <nav aria-label="Main Navigation">
-        <ul class="nav-links">
-          <li><a href="#philosophy">Philosophy</a></li>
-          <li><a href="#ayfer">Meet Ayfer</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#lookbook">Lookbook</a></li>
-          <li><a href="#visit">Visit</a></li>
-        </ul>
-      </nav>
-
-      <div>
-        <a href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener" class="btn-booking">
-          Book Now
-        </a>
-      </div>
+    <div class="header-actions">
+      <a class="header-phone" href="tel:+12018461234">(201) 846-1234</a>
+      <a class="btn btn-solid btn-small" data-magnetic href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener">Book now</a>
+      <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="menu-toggle-bars" aria-hidden="true"><i></i><i></i></span>
+        <span class="sr-only">Menu</span>
+      </button>
     </div>
   </header>
 
-  <main id="top">
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-container">
-        
-        <div class="reveal-on-scroll">
-          <span class="hero-eyebrow">Tenafly, New Jersey • By Ayfer Deniz</span>
-          <h1 class="hero-title">
-            Where Hair Color & Architecture Meet the <em>Lost Art of Pampering.</em>
-          </h1>
-          <p class="hero-desc">
-            Founded by master colorist <strong>Ayfer Deniz</strong>—formerly of the celebrated Ayfer Salon in Closter—Artora Beauty Bar is an intimate, light-filled sanctuary on South Summit Street. We study your bone structure, skin tone, and personal vision to craft effortlessly luminous hair.
-          </p>
-
-          <div class="hero-actions">
-            <a href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener" class="btn-booking">
-              Book Now
-            </a>
-            <a href="#services" class="btn-outline">
-              Explore Menu
-            </a>
-          </div>
-
-          <div class="hero-stats">
-            <div class="stat-item">
-              <strong>30+ Years</strong>
-              <span>Of Experience in Color & Styling</span>
-            </div>
-            <div class="stat-item">
-              <strong>Featured In</strong>
-              <span><em>People</em>, <em>Harper's Bazaar</em> & <em>201 Magazine</em></span>
-            </div>
-            <div class="stat-item">
-              <strong>Certified</strong>
-              <span>Great Lengths Extensions</span>
-            </div>
-            <div class="stat-item">
-              <strong>Bellami</strong>
-              <span>Premium Hair Extensions Used In-Salon</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-media-wrapper reveal-on-scroll">
-          <div class="hero-main-frame">
-            <img src="assets/images/hero-dimensional-brunette.webp" srcset="assets/images/hero-dimensional-brunette-480.webp 480w, assets/images/hero-dimensional-brunette-800.webp 800w, assets/images/hero-dimensional-brunette.webp 1272w" sizes="(max-width: 600px) 88vw, (max-width: 992px) 64vw, 520px" width="1272" height="1615" alt="Soft caramel dimension and long, flowing brunette layers by Ayfer Deniz" fetchpriority="high">
-          </div>
-
-          <div class="hero-floating-quote">
-            <span class="quote-badge">Featured in People Magazine</span>
-            <p class="quote-text">“Hair color no longer has to look flat and matte. You can get natural-looking color with brilliant dimension and shine.”</p>
-            <span class="quote-source">Also featured in <em>Harper's Bazaar</em> & <em>201 Magazine</em></span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Kinetic Marquee Ticker -->
-    <div class="ticker" aria-hidden="true">
-      <div class="ticker-track">
-        <div class="ticker-item">Bespoke Haircuts & Styling <span class="glyph">✦</span></div>
-        <div class="ticker-item">Dimensional Balayage & Highlights <span class="glyph">✦</span></div>
-        <div class="ticker-item">Keratin Smoothing & Blowouts <span class="glyph">✦</span></div>
-        <div class="ticker-item">Certified Great Lengths Extensions <span class="glyph">✦</span></div>
-        <div class="ticker-item">Luxury Scalp & Spa Rituals <span class="glyph">✦</span></div>
-        <div class="ticker-item">By Master Colorist Ayfer Deniz <span class="glyph">✦</span></div>
-
-        <!-- Seamless loop repeat -->
-        <div class="ticker-item">Bespoke Haircuts & Styling <span class="glyph">✦</span></div>
-        <div class="ticker-item">Dimensional Balayage & Highlights <span class="glyph">✦</span></div>
-        <div class="ticker-item">Keratin Smoothing & Blowouts <span class="glyph">✦</span></div>
-        <div class="ticker-item">Certified Great Lengths Extensions <span class="glyph">✦</span></div>
-        <div class="ticker-item">Luxury Scalp & Spa Rituals <span class="glyph">✦</span></div>
-        <div class="ticker-item">By Master Colorist Ayfer Deniz <span class="glyph">✦</span></div>
-      </div>
+  <!-- Full-screen menu (small screens) -->
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <nav aria-label="Menu">
+      <a href="#philosophy">Philosophy</a>
+      <a href="#ayfer">Ayfer</a>
+      <a href="#services">Services</a>
+      <a href="#lookbook">Lookbook</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <div class="mobile-menu-foot">
+      <a class="btn btn-solid" href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener">Book now</a>
+      <a class="btn btn-line" href="tel:+12018461234">Call (201) 846-1234</a>
+      <p>8 South Summit St, Side Entrance, 2nd Floor<br>Tenafly, NJ 07670</p>
     </div>
+  </div>
 
-    <!-- Fine Art Gallery Philosophy -->
-    <section id="philosophy" class="section-padding">
-      <div class="container">
-        <div class="section-header reveal-on-scroll">
-          <span class="section-eyebrow">The Artora Philosophy</span>
-          <h2 class="section-title">Presented as a <em>Fine Art Gallery</em>, Where Every Client is a Priceless Piece.</h2>
-          <p class="section-intro">Artora is a calm refuge from the fracas of a frazzled world. Our craft is guided by three principles:</p>
+  <!-- Shade gauge: the page lifts from espresso to platinum as you scroll -->
+  <div class="gauge" id="gauge" aria-hidden="true">
+    <div class="gauge-track"><span class="gauge-dot" id="gaugeDot"></span></div>
+    <div class="gauge-label"><span id="gaugeLevel">2</span><span id="gaugeName">Espresso</span></div>
+  </div>
+
+  <main id="main">
+
+    <!-- ======================= HERO ======================= -->
+    <section class="hero" id="top" data-tone="dark" data-shade="Espresso" data-level="2" aria-label="Artora Beauty Bar">
+      <div class="hero-stage" id="heroStage">
+
+        <div class="hero-reels" id="heroReels" aria-hidden="true">
+          <video class="hero-reel hero-reel--side" muted loop playsinline preload="none" poster="assets/images/posters/hero-espresso-silk.webp" data-src="assets/videos/hero-espresso-silk.mp4"></video>
+          <video class="hero-reel" muted loop playsinline preload="none" poster="assets/images/posters/hero-dimensional-waves.webp" data-src="assets/videos/hero-dimensional-waves.mp4"></video>
+          <video class="hero-reel hero-reel--side" muted loop playsinline preload="none" poster="assets/images/posters/hero-sunkissed-blonde.webp" data-src="assets/videos/hero-sunkissed-blonde.mp4"></video>
+        </div>
+        <div class="hero-scrim" id="heroScrim" aria-hidden="true"></div>
+
+        <!-- The wordmark is cut out of an espresso field; the reels show through the letters -->
+        <svg class="hero-mask" id="heroMask" aria-hidden="true" focusable="false" preserveAspectRatio="none">
+          <defs>
+            <radialGradient id="heroField" cx="50%" cy="42%" r="75%">
+              <stop offset="0" stop-color="#2C1B12"/>
+              <stop offset="0.6" stop-color="#1B100A"/>
+              <stop offset="1" stop-color="#120A06"/>
+            </radialGradient>
+            <mask id="heroCut" maskUnits="userSpaceOnUse">
+              <rect id="heroCutBg" x="0" y="0" width="100%" height="100%" fill="#fff"/>
+              <g id="heroWord"></g>
+            </mask>
+          </defs>
+          <rect id="heroFieldRect" x="0" y="0" width="100%" height="100%" fill="url(#heroField)" mask="url(#heroCut)"/>
+        </svg>
+
+        <div class="hero-band" id="heroBand" aria-hidden="true">
+          <span>Beauty Bar</span><span>Tenafly, New Jersey</span><span>By Ayfer Deniz</span>
         </div>
 
-        <div class="philosophy-grid">
-          <article class="pillar-card reveal-on-scroll">
-            <div>
-              <h3 class="pillar-title">We Listen First</h3>
-              <p class="pillar-text">
-                Your bone structure, face shape, natural hair movement, and daily routine form the blueprint. We tailor every cut so it looks effortless weeks after leaving the chair.
-              </p>
+        <div class="hero-copy" id="heroCopy">
+          <p class="hero-fallback-word" aria-hidden="true">Artora</p>
+          <h1 class="hero-title"><span class="sr-only">Artora Beauty Bar: </span>The private hair studio of master colorist Ayfer Deniz.</h1>
+          <div class="hero-side">
+            <p class="hero-lede">Balayage, blonding, precision cuts and extensions, upstairs at 8 South Summit Street in Tenafly.</p>
+            <div class="hero-actions">
+              <a class="btn btn-solid" data-magnetic href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener">Book now</a>
+              <a class="btn btn-line" href="#lookbook">See the lookbook</a>
             </div>
-            <div class="pillar-tag">Architectural Precision Cuts</div>
-          </article>
+          </div>
+        </div>
 
-          <article class="pillar-card reveal-on-scroll">
-            <div>
-              <h3 class="pillar-title">Color With Dimension</h3>
-              <p class="pillar-text">
-                Hair color should never look flat or matte. Mixing warm golds, rich caramels, buttery blondes, and fiery coppers, we craft reflective multi-tonal shine that catches light.
-              </p>
-            </div>
-            <div class="pillar-tag">Luminous Balayage & Gloss</div>
-          </article>
+        <div class="hero-cue" id="heroCue" aria-hidden="true"><span>Scroll</span><i></i></div>
 
-          <article class="pillar-card reveal-on-scroll">
-            <div>
-              <h3 class="pillar-title">The Lost Art of Pampering</h3>
-              <p class="pillar-text">
-                Great hair is a lasting relationship. We formulate personalized botanical, ammonia-free, and European treatments that restore scalp vitality and keep hair fibers resilient.
-              </p>
+        <figure class="hero-quote" id="heroQuote">
+          <blockquote id="heroQuoteText">“Hair color no longer has to look flat and matte. You can get natural-looking color with brilliant dimension and shine.”</blockquote>
+          <figcaption>Featured in <cite>People</cite> magazine. Also in <cite>Harper's Bazaar</cite> and <cite>201 Magazine</cite>.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ======================= PHILOSOPHY ======================= -->
+    <section class="shade shade--cocoa" id="philosophy" data-tone="dark" data-shade="Dark chocolate" data-level="3">
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track" id="marqueeTrack">
+          <span>Bespoke haircuts and styling</span><i>✦</i>
+          <span class="is-outline">Dimensional balayage and highlights</span><i>✦</i>
+          <span>Keratin smoothing and blowouts</span><i>✦</i>
+          <span class="is-outline">Certified Great Lengths extensions</span><i>✦</i>
+          <span>Scalp and spa rituals</span><i>✦</i>
+          <span class="is-outline">By master colorist Ayfer Deniz</span><i>✦</i>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="display" data-glint>A fine art gallery, where every client is the priceless piece.</h2>
+          <p class="lede">Artora is a calm refuge from a frazzled world. Three ideas guide everything that happens in the chair.</p>
+        </div>
+
+        <div class="story" id="story">
+          <div class="story-visual" aria-hidden="true">
+            <div class="story-frame">
+              <video class="story-media is-active" data-story="0" muted loop playsinline preload="none" data-lazy-video poster="assets/images/posters/reel-ayfer-styling.webp" data-src="assets/videos/reel-ayfer-styling.mp4"></video>
+              <img class="story-media" data-story="1" src="assets/images/hero-dimensional-brunette-800.webp" srcset="assets/images/hero-dimensional-brunette-480.webp 480w, assets/images/hero-dimensional-brunette-800.webp 800w, assets/images/hero-dimensional-brunette.webp 1272w" sizes="(max-width: 900px) 90vw, 480px" width="1272" height="1615" alt="" loading="lazy" decoding="async">
+              <video class="story-media" data-story="2" muted loop playsinline preload="none" data-lazy-video poster="assets/images/posters/reel-glossy-brunette.webp" data-src="assets/videos/reel-glossy-brunette.mp4"></video>
             </div>
-            <div class="pillar-tag">Scalp Health & European Care</div>
-          </article>
+          </div>
+
+          <div class="story-steps">
+            <article class="story-step is-active" data-story="0">
+              <img class="story-inline" src="assets/images/posters/reel-ayfer-styling.webp" width="540" height="960" alt="Ayfer Deniz shaping a client's fringe at Artora Beauty Bar" loading="lazy" decoding="async">
+              <h3 class="story-title">We listen first</h3>
+              <p>Your bone structure, face shape, natural hair movement and daily routine form the blueprint. Every cut is tailored so it still looks effortless weeks after you leave the chair.</p>
+              <p class="story-tag">Architectural precision cuts</p>
+            </article>
+            <article class="story-step" data-story="1">
+              <img class="story-inline" src="assets/images/hero-dimensional-brunette-800.webp" width="800" height="1016" alt="Soft caramel dimension and long, flowing brunette layers by Ayfer Deniz" loading="lazy" decoding="async">
+              <h3 class="story-title">Color with dimension</h3>
+              <p>Hair color should never look flat or matte. Mixing warm golds, rich caramels, buttery blondes and fiery coppers, we build reflective, multi-tonal shine that catches the light.</p>
+              <p class="story-tag">Luminous balayage and gloss</p>
+            </article>
+            <article class="story-step" data-story="2">
+              <img class="story-inline" src="assets/images/posters/reel-glossy-brunette.webp" width="607" height="1080" alt="Long chestnut waves being combed out in natural light" loading="lazy" decoding="async">
+              <h3 class="story-title">The lost art of pampering</h3>
+              <p>Great hair is a lasting relationship. We formulate personalized botanical, ammonia-free and European treatments that restore scalp vitality and keep hair resilient.</p>
+              <p class="story-tag">Scalp health and European care</p>
+            </article>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Meet Ayfer Deniz Bio -->
-    <section id="ayfer" class="section-padding bio-section">
-      <div class="container">
-        <div class="bio-container">
-          
-          <div class="bio-portrait-frame reveal-on-scroll">
-            <div class="bio-image-box">
-              <img loading="lazy" decoding="async" src="assets/images/ayfer-studio.webp" srcset="assets/images/ayfer-studio-480.webp 480w, assets/images/ayfer-studio-800.webp 800w, assets/images/ayfer-studio.webp 963w" sizes="(max-width: 600px) 88vw, (max-width: 992px) 94vw, 530px" width="963" height="1284" alt="Ayfer Deniz on set at a photo shoot in her salon" style="object-position: 50% 22%;">
-              <div class="bio-caption-tag">
-                <div>
-                  <strong>Ayfer Deniz</strong>
-                  <span>Founder & Master Colorist</span>
+    <!-- ======================= AYFER ======================= -->
+    <section class="shade shade--chestnut" id="ayfer" data-tone="dark" data-shade="Chestnut" data-level="5">
+      <div class="wrap ayfer">
+        <div class="ayfer-photos">
+          <figure class="ayfer-portrait" data-reveal="wipe">
+            <img data-parallax="0.08" loading="lazy" decoding="async" src="assets/images/ayfer-studio.webp" srcset="assets/images/ayfer-studio-480.webp 480w, assets/images/ayfer-studio-800.webp 800w, assets/images/ayfer-studio.webp 963w" sizes="(max-width: 900px) 88vw, 500px" width="963" height="1284" alt="Ayfer Deniz on set at a photo shoot in her salon">
+            <figcaption><strong>Ayfer Deniz</strong> Founder and master colorist</figcaption>
+          </figure>
+          <figure class="ayfer-backstage" data-reveal="wipe">
+            <img loading="lazy" decoding="async" src="assets/images/ayfer-backstage-800.webp" srcset="assets/images/ayfer-backstage-480.webp 480w, assets/images/ayfer-backstage-800.webp 800w" sizes="(max-width: 900px) 50vw, 280px" width="1200" height="1200" alt="Ayfer Deniz styling a model's hair backstage before a runway show">
+            <figcaption>Backstage before a runway show</figcaption>
+          </figure>
+        </div>
+
+        <div class="ayfer-text">
+          <h2 class="display" data-glint>A colorist's eye, a sculptor's hand.</h2>
+
+          <blockquote class="pull">“Your bone structure, features, and coloring combined with your vision are all factors we consider to create a personalized look made exclusively for you.”</blockquote>
+
+          <div class="prose">
+            <p>With more than 30 years of experience at the forefront of Bergen County's luxury hair care scene, <strong>Ayfer Deniz</strong> is known for intuitive consultation, architectural cutting technique and multi-dimensional color. As founder and owner of the renowned <strong>Ayfer Salon</strong> on Closter Dock Road in Closter, NJ, she built a loyal clientele who value Manhattan-caliber artistry in a peaceful, welcoming setting.</p>
+            <p>An avid student of fashion, fine art and contemporary technique, Ayfer has styled hair for runway productions and fashion editorial shoots, and has been featured in <em>People</em>, <em>Harper's Bazaar</em> and <em>201 Magazine</em> for her dimensional blondes and rich brunettes.</p>
+            <p>For 19 years Ayfer welcomed clients at Ayfer Salon in Closter, and later at Salon Pavel in Tenafly. Today, at her own studio on South Summit Street, she welcomes guests to an unhurried space where curated European formulas and personal care take center stage.</p>
+          </div>
+
+          <dl class="creds">
+            <div><dt>Balayage and blonde authority</dt><dd>Natural lived-in blondes, soft babylights and mirror-gloss finishes.</dd></div>
+            <div><dt>Great Lengths certified</dt><dd>100% natural human hair extensions for seamless, undetectable volume and length. Bellami premium extensions are also used in-salon.</dd></div>
+            <div><dt>Closter and Tenafly heritage</dt><dd>30+ years of trust serving Northern Bergen County's most discerning clients.</dd></div>
+            <div><dt>Curated global formulas</dt><dd>Hand-selected prestige formulas from Goldwell, Davines and Alfaparf Milano.</dd></div>
+          </dl>
+
+          <div class="actions">
+            <a class="btn btn-solid" data-magnetic href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener">Book now</a>
+            <a class="btn btn-line" href="tel:+12018461234">Call (201) 846-1234</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= SERVICES ======================= -->
+    <section class="shade shade--honey" id="services" data-tone="light" data-shade="Honey" data-level="7">
+      <div class="wrap">
+        <div class="section-head section-head--split">
+          <h2 class="display" data-glint>The menu</h2>
+          <p class="lede">Every visit begins with a personal consultation. Open a service for the details, or see live openings on <a class="text-link" href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener">Vagaro</a>.</p>
+        </div>
+
+        <div class="menu" id="menu">
+
+          <article class="menu-item is-open" data-preview="assets/images/look-rose-pearl-pixie-800.webp">
+            <h3>
+              <button type="button" class="menu-toggle-row" aria-expanded="true" aria-controls="svc-1" id="svc-1-btn">
+                <span class="menu-cat">Cuts and styling</span>
+                <span class="menu-name">Precision haircuts and architecture</span>
+                <span class="menu-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="menu-panel" id="svc-1" role="region" aria-labelledby="svc-1-btn">
+              <div class="menu-panel-inner">
+                <p>Tailored to your bone structure, facial proportions and natural hair movement. From textured French bobs and soft face-framing layers to transformative pixies and classic long silhouettes, every cut includes a luxurious cleansing massage and signature blowout.</p>
+                <ul>
+                  <li>Women’s bespoke cut and blowout</li>
+                  <li>Textured bob and lob sculpting</li>
+                  <li>Men’s tailored cut</li>
+                  <li>Complimentary consultation</li>
+                </ul>
+                <div class="menu-foot">
+                  <span>Includes custom product prescription</span>
+                  <a class="btn btn-solid btn-small" href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener">Book this service</a>
                 </div>
-                <a href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener" style="color: var(--accent-champagne); font-size: 0.8rem; font-weight: 600;">Book Now</a>
               </div>
             </div>
-          </div>
+          </article>
 
-          <div class="reveal-on-scroll">
-            <span class="section-eyebrow">Founder & Creative Director</span>
-            <h2 class="section-title">A colorist's eye, <em>a sculptor's hand.</em></h2>
-
-            <blockquote class="bio-quote-highlight">
-              “Your bone structure, features, and coloring combined with your vision are all factors we consider to create a personalized look made exclusively for you.”
-            </blockquote>
-
-            <div class="bio-narrative">
-              <p>
-                With more than 30 years of experience at the forefront of Bergen County's luxury hair care scene, <strong>Ayfer Deniz</strong> is known for intuitive consultation, architectural cutting technique, and multi-dimensional color. As former founder and owner of the renowned <strong>Ayfer Salon</strong> on Closter Dock Road in Closter, NJ, Ayfer built a loyal clientele who value Manhattan-caliber artistry in a peaceful, welcoming setting.
-              </p>
-              <p>
-                An avid student of fashion, fine art, and contemporary technique, Ayfer has styled hair for runway productions, fashion editorial shoots, and has been featured in <em>People</em>, <em>Harper's Bazaar</em> and <em>201 Magazine</em> for her dimensional blondes and rich brunettes.
-              </p>
-              <p>
-                For 19 years Ayfer welcomed clients as the owner of <strong>Ayfer Salon</strong> in Closter, and later at Salon Pavel in Tenafly. Today, at her own studio, <strong>Artora Beauty Bar</strong> on South Summit Street in Tenafly, she welcomes guests to an unhurried studio where curated European formulas and personalized care take center stage.
-              </p>
-            </div>
-
-            <div class="bio-credentials-grid">
-              <div class="credential-card">
-                <h3>Balayage & Blonde Authority</h3>
-                <p>Specializing in natural lived-in blondes, soft babylights, and mirror gloss finishes.</p>
-              </div>
-              <div class="credential-card">
-                <h3>Great Lengths Certified</h3>
-                <p>100% natural human hair extensions for seamless, undetectable volume and length.</p>
-              </div>
-              <div class="credential-card">
-                <h3>Closter & Tenafly Heritage</h3>
-                <p>30+ years of trust serving Northern Bergen County's most discerning clients.</p>
-              </div>
-              <div class="credential-card">
-                <h3>Curated Global Formulas</h3>
-                <p>Hand-selected prestige formulas from Goldwell, Davines, and Alfaparf Milano.</p>
+          <article class="menu-item" data-preview="assets/images/look-honey-blowout-800.webp">
+            <h3>
+              <button type="button" class="menu-toggle-row" aria-expanded="false" aria-controls="svc-2" id="svc-2-btn">
+                <span class="menu-cat">Cuts and styling</span>
+                <span class="menu-name">Signature blowouts and evening hair design</span>
+                <span class="menu-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="menu-panel" id="svc-2" role="region" aria-labelledby="svc-2-btn">
+              <div class="menu-panel-inner">
+                <p>Whether you want bouncy, luminous salon waves, a sleek glass-hair blowout, or creative evening and bridal hair design for life’s milestone celebrations, we craft long-lasting volume and effortless movement.</p>
+                <ul>
+                  <li>Luminous salon blowout</li>
+                  <li>Red-carpet waves and curls</li>
+                  <li>Creative evening updos</li>
+                  <li>Bridal and event styling</li>
+                </ul>
+                <div class="menu-foot">
+                  <span>Available for individual and event bookings</span>
+                  <a class="btn btn-solid btn-small" href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener">Book this service</a>
+                </div>
               </div>
             </div>
+          </article>
 
-            <div class="bio-actions">
-              <a href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener" class="btn-booking">
-                Book Now
-              </a>
-              <a href="tel:+12018461234" class="btn-outline">
-                Call (201) 846-1234
-              </a>
+          <article class="menu-item" data-preview="assets/images/look-sunlit-blonde-800.webp">
+            <h3>
+              <button type="button" class="menu-toggle-row" aria-expanded="false" aria-controls="svc-3" id="svc-3-btn">
+                <span class="menu-cat">Color and balayage</span>
+                <span class="menu-name">Dimensional balayage and highlights</span>
+                <span class="menu-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="menu-panel" id="svc-3" role="region" aria-labelledby="svc-3-btn">
+              <div class="menu-panel-inner">
+                <p>Our signature specialty. Using hand-painted balayage, micro-fine babylights and custom foil placement, Ayfer creates sun-kissed buttery blondes, warm honey ribbons and rich caramel dimension that grow out seamlessly, without harsh lines.</p>
+                <ul>
+                  <li>Hand-painted balayage</li>
+                  <li>Full and partial foil highlights</li>
+                  <li>Face-framing money piece</li>
+                  <li>L’Oréal ammonia-free highlighting</li>
+                </ul>
+                <div class="menu-foot">
+                  <span>Formulated for skin tone and season</span>
+                  <a class="btn btn-solid btn-small" href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener">Book this service</a>
+                </div>
+              </div>
             </div>
-          </div>
+          </article>
 
+          <article class="menu-item" data-preview="assets/images/look-caramel-brunette-800.webp">
+            <h3>
+              <button type="button" class="menu-toggle-row" aria-expanded="false" aria-controls="svc-4" id="svc-4-btn">
+                <span class="menu-cat">Color and balayage</span>
+                <span class="menu-name">Single-process color and diamond gloss</span>
+                <span class="menu-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="menu-panel" id="svc-4" role="region" aria-labelledby="svc-4-btn">
+              <div class="menu-panel-inner">
+                <p>Rich, believable, multi-faceted color from root to ends, or seamless gray coverage, powered by Goldwell and Alfaparf Milano Semi di Lino Diamante illuminating formulations for extraordinary softness and shine.</p>
+                <ul>
+                  <li>Single-process root and all-over color</li>
+                  <li>Believable gray blending and coverage</li>
+                  <li>Illuminating toner and gloss refresh</li>
+                  <li>Corrective color artistry</li>
+                </ul>
+                <div class="menu-foot">
+                  <span>Vibrant, healthy, non-flat finish</span>
+                  <a class="btn btn-solid btn-small" href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener">Book this service</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item" data-preview="assets/images/posters/reel-espresso-silk.webp">
+            <h3>
+              <button type="button" class="menu-toggle-row" aria-expanded="false" aria-controls="svc-5" id="svc-5-btn">
+                <span class="menu-cat">Keratin and smoothing</span>
+                <span class="menu-name">Keratin treatments and express blowouts</span>
+                <span class="menu-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="menu-panel" id="svc-5" role="region" aria-labelledby="svc-5-btn">
+              <div class="menu-panel-inner">
+                <p>Transform frizzy, unruly or humidity-prone hair into silk. Our professional keratin smoothing rituals infuse the cuticle with restorative proteins, dramatically cutting daily styling time while preserving natural body and movement.</p>
+                <ul>
+                  <li>Full keratin smoothing ritual</li>
+                  <li>Express keratin blowout</li>
+                  <li>Humidity and frizz shield</li>
+                  <li>Cuticle sealing and shine restoration</li>
+                </ul>
+                <div class="menu-foot">
+                  <span>Weeks of effortless, frizz-free manageability</span>
+                  <a class="btn btn-solid btn-small" href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener">Book this service</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item" data-preview="assets/images/look-ribbon-blonde-800.webp">
+            <h3>
+              <button type="button" class="menu-toggle-row" aria-expanded="false" aria-controls="svc-6" id="svc-6-btn">
+                <span class="menu-cat">Hair extensions</span>
+                <span class="menu-name">Great Lengths hair extensions</span>
+                <span class="menu-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="menu-panel" id="svc-6" role="region" aria-labelledby="svc-6-btn">
+              <div class="menu-panel-inner">
+                <p>Certified in world-renowned <strong>Great Lengths 100% natural human hair extensions</strong>. Whether you want dramatic mermaid length, fuller density on fine sides, or chemical-free pops of dimensional color, each strand is custom-matched and invisibly bonded.</p>
+                <ul>
+                  <li>100% ethical human hair</li>
+                  <li>Custom volume and length design</li>
+                  <li>Invisible strand-by-strand bonding</li>
+                  <li>Complimentary extension consultation</li>
+                </ul>
+                <div class="menu-foot">
+                  <span>Schedule a complimentary consultation</span>
+                  <a class="btn btn-solid btn-small" href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener">Book this service</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item" data-preview="assets/images/posters/reel-dimensional-waves.webp">
+            <h3>
+              <button type="button" class="menu-toggle-row" aria-expanded="false" aria-controls="svc-7" id="svc-7-btn">
+                <span class="menu-cat">Scalp and spa</span>
+                <span class="menu-name">Scalp and botanical hair spa</span>
+                <span class="menu-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="menu-panel" id="svc-7" role="region" aria-labelledby="svc-7-btn">
+              <div class="menu-panel-inner">
+                <p>Luminous hair begins at the root. Indulge in our holistic scalp detox, oxygenation and deep nano-conditioning rituals using J.F. Lazartigue, Davines Nounou and Pureology Nanoworks to restore elasticity and soothe tension.</p>
+                <ul>
+                  <li>Purifying scalp detox and massage</li>
+                  <li>Deep restructuring mask ritual</li>
+                  <li>Color-preserving hydration therapy</li>
+                  <li>Post-chemical bond repair</li>
+                </ul>
+                <div class="menu-foot">
+                  <span>Ideal standalone or add-on ritual</span>
+                  <a class="btn btn-solid btn-small" href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener">Book this service</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item" data-preview="assets/images/look-caramel-ribbons-800.webp">
+            <h3>
+              <button type="button" class="menu-toggle-row" aria-expanded="false" aria-controls="svc-8" id="svc-8-btn">
+                <span class="menu-cat">Scalp and spa</span>
+                <span class="menu-name">Beauty bar finishing and skin rituals</span>
+                <span class="menu-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="menu-panel" id="svc-8" role="region" aria-labelledby="svc-8-btn">
+              <div class="menu-panel-inner">
+                <p>Complete your transformation with facial framing and restorative beauty treatments, from precision eyebrow shaping and threading to deeply hydrating European skin care rituals curated to leave you glowing from head to toe.</p>
+                <ul>
+                  <li>Eyebrow shaping and threading</li>
+                  <li>Rejuvenating facial and collagen care</li>
+                  <li>Special occasion makeup inquiry</li>
+                  <li>At-home regimen curation</li>
+                </ul>
+                <div class="menu-foot">
+                  <span>View the full live menu on Vagaro</span>
+                  <a class="btn btn-solid btn-small" href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener">Book this service</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+      <div class="menu-preview" id="menuPreview" aria-hidden="true"><img alt="" id="menuPreviewImg"></div>
+    </section>
+
+    <!-- ======================= LOOKBOOK ======================= -->
+    <section class="shade shade--champagne" id="lookbook" data-tone="light" data-shade="Champagne" data-level="9">
+      <div class="wrap">
+        <div class="section-head section-head--split">
+          <h2 class="display" data-glint>Created at Artora</h2>
+          <p class="lede">Recent color, cuts and reels from the Tenafly studio. Select any piece to see it closer.</p>
+        </div>
+
+        <div class="filters" role="group" aria-label="Filter the lookbook" id="lookFilters">
+          <button type="button" class="filter is-active" aria-pressed="true" data-filter="all">All work</button>
+          <button type="button" class="filter" aria-pressed="false" data-filter="video">Reels</button>
+          <button type="button" class="filter" aria-pressed="false" data-filter="blonde">Blonde and balayage</button>
+          <button type="button" class="filter" aria-pressed="false" data-filter="brunette">Brunette and rich tones</button>
+          <button type="button" class="filter" aria-pressed="false" data-filter="cuts">Cuts</button>
+        </div>
+
+        <div class="looks" id="looks">
+
+          <a class="look" href="assets/images/look-sunlit-blonde.webp" data-type="image" data-tags="blonde" data-caption="Buttery sunlit blonde with soft face-framing layers">
+            <span class="look-media"><img src="assets/images/look-sunlit-blonde-800.webp" srcset="assets/images/look-sunlit-blonde-480.webp 480w, assets/images/look-sunlit-blonde-800.webp 800w, assets/images/look-sunlit-blonde.webp 1071w" sizes="(max-width: 640px) 92vw, (max-width: 1000px) 46vw, 420px" width="1071" height="1347" alt="Buttery sunlit blonde hair transformation" loading="lazy" decoding="async"></span>
+            <span class="look-info"><strong>Buttery sunlit blonde</strong><em>Custom foil highlights and blowout</em></span>
+          </a>
+
+          <a class="look look--reel" href="assets/videos/reel-ayfer-styling.mp4" data-type="video" data-tags="video brunette cuts" data-caption="Ayfer Deniz crafting a glass-shine brunette blowout and fringe at Artora Beauty Bar">
+            <span class="look-media"><video muted loop playsinline preload="none" data-lazy-video poster="assets/images/posters/reel-ayfer-styling.webp" data-src="assets/videos/reel-ayfer-styling.mp4" aria-label="Ayfer Deniz styling a brunette blowout and fringe"></video></span>
+            <span class="look-flag">Reel</span>
+            <span class="look-info"><strong>Ayfer behind the chair</strong><em>Silk blowout and curtain fringe</em></span>
+          </a>
+
+          <a class="look" href="assets/images/look-runway-curls.webp" data-type="image" data-tags="blonde cuts" data-caption="Hair by Ayfer Deniz, model Gaby. Photo © 2016 Shawn Michael Lowe">
+            <span class="look-media"><img src="assets/images/look-runway-curls-800.webp" srcset="assets/images/look-runway-curls-480.webp 480w, assets/images/look-runway-curls-800.webp 800w, assets/images/look-runway-curls.webp 1100w" sizes="(max-width: 640px) 92vw, (max-width: 1000px) 46vw, 420px" width="1100" height="1375" alt="Model Gaby on the runway with voluminous honey-blonde curls styled by Ayfer Deniz" loading="lazy" decoding="async" style="object-position: 50% 15%;"></span>
+            <span class="look-info"><strong>Runway curls</strong><em>Model Gaby. Photo &copy; 2016 Shawn Michael Lowe</em></span>
+          </a>
+
+          <a class="look" href="assets/images/look-ribbon-blonde.webp" data-type="image" data-tags="blonde" data-caption="Bright ribboned blonde highlights with long, swept layers">
+            <span class="look-media"><img src="assets/images/look-ribbon-blonde-800.webp" srcset="assets/images/look-ribbon-blonde-480.webp 480w, assets/images/look-ribbon-blonde-800.webp 800w, assets/images/look-ribbon-blonde.webp 1086w" sizes="(max-width: 640px) 92vw, (max-width: 1000px) 46vw, 420px" width="1086" height="1357" alt="Long blonde hair with bright ribboned highlights and soft root" loading="lazy" decoding="async" style="object-position: 50% 20%;"></span>
+            <span class="look-info"><strong>Ribboned blonde</strong><em>Bright babylights and long layers</em></span>
+          </a>
+
+          <a class="look" href="assets/images/look-caramel-brunette.webp" data-type="image" data-tags="brunette" data-caption="Warm espresso and caramel dimensional blowout">
+            <span class="look-media"><img src="assets/images/look-caramel-brunette-800.webp" srcset="assets/images/look-caramel-brunette-480.webp 480w, assets/images/look-caramel-brunette-800.webp 800w, assets/images/look-caramel-brunette.webp 1102w" sizes="(max-width: 640px) 92vw, (max-width: 1000px) 46vw, 420px" width="1102" height="1400" alt="Warm espresso and caramel hair color" loading="lazy" decoding="async"></span>
+            <span class="look-info"><strong>Espresso and warm caramel</strong><em>Rich multi-dimensional color</em></span>
+          </a>
+
+          <a class="look look--reel" href="assets/videos/reel-sunkissed-blonde.mp4" data-type="video" data-tags="video blonde" data-caption="Sun-kissed dimensional blonde blowout">
+            <span class="look-media"><video muted loop playsinline preload="none" data-lazy-video poster="assets/images/posters/reel-sunkissed-blonde.webp" data-src="assets/videos/reel-sunkissed-blonde.mp4" aria-label="Sun-kissed dimensional blonde blowout in motion"></video></span>
+            <span class="look-flag">Reel</span>
+            <span class="look-info"><strong>Golden hour balayage</strong><em>Soft root melt and lived-in blonde</em></span>
+          </a>
+
+          <a class="look" href="assets/images/look-rose-pearl-pixie.webp" data-type="image" data-tags="cuts blonde" data-caption="Sculpted rose-pearl textured pixie cut">
+            <span class="look-media"><img src="assets/images/look-rose-pearl-pixie-800.webp" srcset="assets/images/look-rose-pearl-pixie-480.webp 480w, assets/images/look-rose-pearl-pixie-800.webp 800w, assets/images/look-rose-pearl-pixie.webp 1233w" sizes="(max-width: 640px) 92vw, (max-width: 1000px) 46vw, 420px" width="1233" height="1344" alt="Sculpted rose pearl pixie cut" loading="lazy" decoding="async"></span>
+            <span class="look-info"><strong>Rose-pearl textured pixie</strong><em>Architectural crop and pastel gloss</em></span>
+          </a>
+
+          <a class="look" href="assets/images/look-platinum-lob.webp" data-type="image" data-tags="blonde cuts" data-caption="Sleek pearl-platinum lob and wispy bangs">
+            <span class="look-media"><img src="assets/images/look-platinum-lob-800.webp" srcset="assets/images/look-platinum-lob-480.webp 480w, assets/images/look-platinum-lob-800.webp 800w, assets/images/look-platinum-lob.webp 1207w" sizes="(max-width: 640px) 92vw, (max-width: 1000px) 46vw, 420px" width="1207" height="1400" alt="Sleek platinum blonde lob haircut" loading="lazy" decoding="async"></span>
+            <span class="look-info"><strong>Pearl-platinum sleek lob</strong><em>Razor-sharp line and silk finish</em></span>
+          </a>
+
+          <a class="look look--reel" href="assets/videos/reel-glossy-brunette.mp4" data-type="video" data-tags="video brunette" data-caption="Mirror-shine chestnut brunette waves in natural light">
+            <span class="look-media"><video muted loop playsinline preload="none" data-lazy-video poster="assets/images/posters/reel-glossy-brunette.webp" data-src="assets/videos/reel-glossy-brunette.mp4" aria-label="Mirror-shine chestnut brunette waves in motion"></video></span>
+            <span class="look-flag">Reel</span>
+            <span class="look-info"><strong>Velvet chestnut waves</strong><em>Diamond gloss and sculpted movement</em></span>
+          </a>
+
+          <a class="look" href="assets/images/look-caramel-ribbons.webp" data-type="image" data-tags="brunette" data-caption="Caramel face-framing ribbons on rich brunette">
+            <span class="look-media"><img src="assets/images/look-caramel-ribbons-800.webp" srcset="assets/images/look-caramel-ribbons-480.webp 480w, assets/images/look-caramel-ribbons-800.webp 800w, assets/images/look-caramel-ribbons.webp 1074w" sizes="(max-width: 640px) 92vw, (max-width: 1000px) 46vw, 420px" width="1074" height="1342" alt="Brunette hair with warm caramel face-framing highlights" loading="lazy" decoding="async" style="object-position: 50% 25%;"></span>
+            <span class="look-info"><strong>Caramel ribbons</strong><em>Brunette with warm face-framing highlights</em></span>
+          </a>
+
+          <a class="look look--square" href="assets/images/ayfer-backstage.webp" data-type="image" data-tags="cuts" data-caption="Ayfer Deniz styling models backstage before a runway show">
+            <span class="look-media"><img src="assets/images/ayfer-backstage-800.webp" srcset="assets/images/ayfer-backstage-480.webp 480w, assets/images/ayfer-backstage-800.webp 800w, assets/images/ayfer-backstage.webp 1200w" sizes="(max-width: 640px) 92vw, (max-width: 1000px) 46vw, 420px" width="1200" height="1200" alt="Ayfer Deniz styling a model's hair backstage before a runway show" loading="lazy" decoding="async" style="object-position: 40% 50%;"></span>
+            <span class="look-info"><strong>Ayfer backstage</strong><em>Runway prep and finishing</em></span>
+          </a>
+
+          <a class="look" href="assets/images/look-champagne-bob.webp" data-type="image" data-tags="blonde cuts" data-caption="Feathered champagne blonde bob inside Artora Beauty Bar">
+            <span class="look-media"><img src="assets/images/look-champagne-bob-800.webp" srcset="assets/images/look-champagne-bob-480.webp 480w, assets/images/look-champagne-bob-800.webp 800w, assets/images/look-champagne-bob.webp 1126w" sizes="(max-width: 640px) 92vw, (max-width: 1000px) 46vw, 420px" width="1126" height="1400" alt="Champagne blonde layered bob" loading="lazy" decoding="async"></span>
+            <span class="look-info"><strong>Feathered champagne bob</strong><em>Volume, movement and bright highlights</em></span>
+          </a>
+
+          <a class="look look--reel" href="assets/videos/reel-dimensional-waves.mp4" data-type="video" data-tags="video blonde" data-caption="Multi-tonal champagne and caramel ribbons in motion">
+            <span class="look-media"><video muted loop playsinline preload="none" data-lazy-video poster="assets/images/posters/reel-dimensional-waves.webp" data-src="assets/videos/reel-dimensional-waves.mp4" aria-label="Multi-tonal champagne and caramel waves in motion"></video></span>
+            <span class="look-flag">Reel</span>
+            <span class="look-info"><strong>Multi-tonal ribbons</strong><em>Seamless blonde and caramel blend</em></span>
+          </a>
+
+          <a class="look" href="assets/images/look-honey-blowout.webp" data-type="image" data-tags="blonde" data-caption="Cascading honey-gold layers and signature blowout">
+            <span class="look-media"><img src="assets/images/look-honey-blowout-800.webp" srcset="assets/images/look-honey-blowout-480.webp 480w, assets/images/look-honey-blowout-800.webp 800w, assets/images/look-honey-blowout.webp 1068w" sizes="(max-width: 640px) 92vw, (max-width: 1000px) 46vw, 420px" width="1068" height="1400" alt="Cascading honey blonde blowout" loading="lazy" decoding="async"></span>
+            <span class="look-info"><strong>Cascading honey gold</strong><em>Seamless highlights and bouncy ends</em></span>
+          </a>
+
+          <a class="look look--reel" href="assets/videos/reel-espresso-silk.mp4" data-type="video" data-tags="video brunette" data-caption="Luminous copper-kissed espresso blowout">
+            <span class="look-media"><video muted loop playsinline preload="none" data-lazy-video poster="assets/images/posters/reel-espresso-silk.webp" data-src="assets/videos/reel-espresso-silk.mp4" aria-label="Copper-kissed espresso blowout in motion"></video></span>
+            <span class="look-flag">Reel</span>
+            <span class="look-info"><strong>Copper-kissed espresso</strong><em>Keratin silk and radiant shine</em></span>
+          </a>
+
+        </div>
+
+        <!-- Instagram -->
+        <div class="insta">
+          <h3 class="insta-title">More on Instagram</h3>
+          <a class="insta-link" href="https://www.instagram.com/artorabeautybar/" target="_blank" rel="noopener">
+            <span class="insta-handle">@artorabeautybar</span>
+            <span class="insta-note">The studio: client transformations, seasonal color and behind the scenes in Tenafly</span>
+          </a>
+          <a class="insta-link" href="https://www.instagram.com/ayfer_hair" target="_blank" rel="noopener">
+            <span class="insta-handle">@ayfer_hair</span>
+            <span class="insta-note">Ayfer's own feed, mostly hair</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="section-padding">
-      <div class="container">
-        <div class="section-header reveal-on-scroll">
-          <span class="section-eyebrow">Curated Menu of Services</span>
-          <h2 class="section-title">Intelligently Beautiful, <em>Thoroughly Modern</em> Hair.</h2>
-          <p class="section-intro">Every visit begins with a personal consultation. Choose a category below or explore live openings on Vagaro.</p>
-        </div>
+    <!-- ======================= VISIT ======================= -->
+    <section class="shade shade--platinum" id="visit" data-tone="light" data-shade="Platinum" data-level="10">
+      <div class="wrap visit">
+        <div class="visit-info">
+          <h2 class="display" data-glint>Upstairs on Summit Street</h2>
 
-        <div class="menu-tabs reveal-on-scroll" role="group" aria-label="Service categories">
-          <button type="button" class="tab-btn active" data-category="all">All Services</button>
-          <button type="button" class="tab-btn" data-category="cuts">Cuts &amp; Styling</button>
-          <button type="button" class="tab-btn" data-category="color">Color &amp; Balayage</button>
-          <button type="button" class="tab-btn" data-category="keratin">Keratin &amp; Smoothing</button>
-          <button type="button" class="tab-btn" data-category="extensions">Hair Extensions</button>
-          <button type="button" class="tab-btn" data-category="spa">Scalp &amp; Spa</button>
-        </div>
-
-        <div class="services-menu-grid" id="servicesGrid">
-          <article class="service-card reveal-on-scroll" data-category="cuts">
-            <div>
-              <span class="service-category-badge">Cuts &amp; Styling</span>
-              <h3>Precision Haircuts &amp; Architecture</h3>
-              <p>Tailored to your bone structure, facial proportions, and natural hair movement. From textured French bobs and soft face-framing layers to transformative pixies and classic long silhouettes, every cut includes a luxurious cleansing massage and signature blowout.</p>
-              <ul class="service-features">
-                <li>Women’s Bespoke Cut &amp; Blowout</li>
-                <li>Textured Bob &amp; Lob Sculpting</li>
-                <li>Men’s Tailored Cut</li>
-                <li>Complimentary Consultation</li>
-              </ul>
-            </div>
-            <div class="service-card-footer">
-              <span class="service-note">Includes custom product prescription</span>
-              <a href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener" class="btn-service-book">Book Now</a>
-            </div>
-          </article>
-          <article class="service-card reveal-on-scroll" data-category="cuts">
-            <div>
-              <span class="service-category-badge">Cuts &amp; Styling</span>
-              <h3>Signature Blowouts &amp; Evening Hair Design</h3>
-              <p>Whether you desire bouncy, luminous salon waves, a sleek glass-hair blowout, or creative evening and bridal hair design for life’s milestone celebrations, we craft long-lasting volume and effortless movement.</p>
-              <ul class="service-features">
-                <li>Luminous Salon Blowout</li>
-                <li>Red-Carpet Waves &amp; Curls</li>
-                <li>Creative Evening Updos</li>
-                <li>Bridal &amp; Event Styling</li>
-              </ul>
-            </div>
-            <div class="service-card-footer">
-              <span class="service-note">Available for individual &amp; event bookings</span>
-              <a href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener" class="btn-service-book">Book Now</a>
-            </div>
-          </article>
-          <article class="service-card reveal-on-scroll" data-category="color">
-            <div>
-              <span class="service-category-badge">Color &amp; Balayage</span>
-              <h3>Dimensional Balayage &amp; Highlights</h3>
-              <p>Our signature specialty. Using hand-painted balayage, micro-fine babylights, and custom foil placement, Ayfer creates sun-kissed buttery blondes, warm honey ribbons, and rich caramel dimension that grow out seamlessly without harsh lines.</p>
-              <ul class="service-features">
-                <li>Hand-Painted Balayage</li>
-                <li>Full &amp; Partial Foil Highlights</li>
-                <li>Face-Framing Money Piece</li>
-                <li>L’Oréal Ammonia-Free Highlighting</li>
-              </ul>
-            </div>
-            <div class="service-card-footer">
-              <span class="service-note">Formulated for skin tone &amp; season</span>
-              <a href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener" class="btn-service-book">Book Now</a>
-            </div>
-          </article>
-          <article class="service-card reveal-on-scroll" data-category="color">
-            <div>
-              <span class="service-category-badge">Color &amp; Balayage</span>
-              <h3>Single-Process Color &amp; Diamond Gloss</h3>
-              <p>Rich, believable, multi-faceted color from root to ends—or seamless gray coverage—powered by Goldwell and Alfaparf Milano Semi di Lino Diamante illuminating formulations for extraordinary softness and shine.</p>
-              <ul class="service-features">
-                <li>Single-Process Root &amp; All-Over Color</li>
-                <li>Believable Gray Blending &amp; Coverage</li>
-                <li>Illuminating Toner &amp; Gloss Refresh</li>
-                <li>Corrective Color Artistry</li>
-              </ul>
-            </div>
-            <div class="service-card-footer">
-              <span class="service-note">Vibrant, healthy, non-flat finish</span>
-              <a href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener" class="btn-service-book">Book Now</a>
-            </div>
-          </article>
-          <article class="service-card reveal-on-scroll" data-category="keratin">
-            <div>
-              <span class="service-category-badge">Keratin &amp; Smoothing</span>
-              <h3>Keratin Treatments &amp; Express Blowouts</h3>
-              <p>Transform frizzy, unruly, or humidity-prone hair into silk. Our professional keratin smoothing rituals infuse the cuticle with restorative proteins, dramatically cutting daily styling time while preserving natural body and movement.</p>
-              <ul class="service-features">
-                <li>Full Keratin Smoothing Ritual</li>
-                <li>Express Keratin Blowout</li>
-                <li>Humidity &amp; Frizz Shield</li>
-                <li>Cuticle Sealing &amp; Shine Restoration</li>
-              </ul>
-            </div>
-            <div class="service-card-footer">
-              <span class="service-note">Weeks of effortless, frizz-free manageability</span>
-              <a href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener" class="btn-service-book">Book Now</a>
-            </div>
-          </article>
-          <article class="service-card reveal-on-scroll" data-category="extensions">
-            <div>
-              <span class="service-category-badge">Hair Extensions</span>
-              <h3>Great Lengths Hair Extensions</h3>
-              <p>Certified in world-renowned <strong>Great Lengths 100% Natural Human Hair Extensions</strong>. Whether you want dramatic mermaid length, fuller density on fine sides, or chemical-free pops of dimensional color, each strand is custom-matched and invisibly bonded.</p>
-              <ul class="service-features">
-                <li>100% Ethical Human Hair</li>
-                <li>Custom Volume &amp; Length Design</li>
-                <li>Invisible Strand-by-Strand Bonding</li>
-                <li>Complimentary Extension Consultation</li>
-              </ul>
-            </div>
-            <div class="service-card-footer">
-              <span class="service-note">Schedule a complimentary consultation</span>
-              <a href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener" class="btn-service-book">Book Now</a>
-            </div>
-          </article>
-          <article class="service-card reveal-on-scroll" data-category="spa">
-            <div>
-              <span class="service-category-badge">Scalp &amp; Spa</span>
-              <h3>Luxurious Scalp &amp; Botanical Hair Spa</h3>
-              <p>Luminous hair begins at the root. Indulge in our holistic scalp detox, oxygenation, and deep nano-conditioning rituals using J.F. Lazartigue, Davines Nounou, and Pureology Nanoworks to restore elasticity and soothe tension.</p>
-              <ul class="service-features">
-                <li>Purifying Scalp Detox &amp; Massage</li>
-                <li>Deep Restructuring Mask Ritual</li>
-                <li>Color-Preserving Hydration Therapy</li>
-                <li>Post-Chemical Bond Repair</li>
-              </ul>
-            </div>
-            <div class="service-card-footer">
-              <span class="service-note">Ideal standalone or add-on ritual</span>
-              <a href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener" class="btn-service-book">Book Now</a>
-            </div>
-          </article>
-          <article class="service-card reveal-on-scroll" data-category="spa">
-            <div>
-              <span class="service-category-badge">Scalp &amp; Spa</span>
-              <h3>Beauty Bar Finishing &amp; Skin Rituals</h3>
-              <p>Complete your transformation with facial framing and restorative beauty treatments—from precision eyebrow shaping and threading to deeply hydrating European skin care rituals curated to leave you glowing from head to toe.</p>
-              <ul class="service-features">
-                <li>Eyebrow Shaping &amp; Threading</li>
-                <li>Rejuvenating Facial &amp; Collagen Care</li>
-                <li>Special Occasion Makeup Inquiry</li>
-                <li>At-Home Regimen Curation</li>
-              </ul>
-            </div>
-            <div class="service-card-footer">
-              <span class="service-note">View full live menu on Vagaro</span>
-              <a href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener" class="btn-service-book">Book Now</a>
-            </div>
-          </article>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Lookbook & Editorial Showcase -->
-    <section id="lookbook" class="section-padding" style="background-color: var(--bg-subtle);">
-      <div class="container">
-        <div class="section-header reveal-on-scroll">
-          <span class="section-eyebrow">Lookbook & Transformations</span>
-          <h2 class="section-title">Created at <em>Artora</em>.</h2>
-          <p class="section-intro">Effortless movement, tailored color, and healthy texture crafted right in our Tenafly studio. Explore recent transformations and motion reels, and tap any photo or video to view it closer.</p>
-        </div>
-
-        <div class="menu-tabs reveal-on-scroll" role="group" aria-label="Portfolio filters">
-          <button type="button" class="tab-btn active" data-filter="all">All Works</button>
-          <button type="button" class="tab-btn" data-filter="video">Motion Reels (Video)</button>
-          <button type="button" class="tab-btn" data-filter="blonde">Blonde &amp; Balayage</button>
-          <button type="button" class="tab-btn" data-filter="brunette">Brunette &amp; Rich Tones</button>
-          <button type="button" class="tab-btn" data-filter="cuts">Editorial Cuts</button>
-        </div>
-
-        <div class="lookbook-grid" id="lookbookGrid">
-          <!-- Photo 3: Sunlit Blonde Layers -->
-          <div class="lookbook-item" tabindex="0" role="button" data-type="image" data-tags="blonde" data-src="assets/images/look-sunlit-blonde.webp" data-caption="Buttery Sunlit Blonde with Soft Face-Framing Layers">
-            <img src="assets/images/look-sunlit-blonde.webp" srcset="assets/images/look-sunlit-blonde-480.webp 480w, assets/images/look-sunlit-blonde-800.webp 800w, assets/images/look-sunlit-blonde.webp 1071w" sizes="(max-width: 600px) 88vw, (max-width: 1100px) 45vw, 400px" width="1071" height="1347" alt="Buttery sunlit blonde hair transformation" loading="lazy" />
-            <span class="lookbook-badge">Blonde Authority</span>
-            <div class="lookbook-overlay">
-              <h3>Buttery Sunlit Blonde</h3>
-              <p>Custom Foil Highlights &amp; Blowout</p>
-            </div>
-          </div>
-
-          <!-- Photo: Runway curls -->
-          <div class="lookbook-item" tabindex="0" role="button" data-type="image" data-tags="blonde cuts" data-src="assets/images/look-runway-curls.webp" data-caption="Hair by Ayfer Deniz, model Gaby. Photo © 2016 Shawn Michael Lowe">
-            <img src="assets/images/look-runway-curls.webp" srcset="assets/images/look-runway-curls-480.webp 480w, assets/images/look-runway-curls-800.webp 800w, assets/images/look-runway-curls.webp 1100w" sizes="(max-width: 600px) 88vw, (max-width: 1100px) 45vw, 400px" width="1100" height="1375" alt="Model Gaby on the runway with voluminous honey-blonde curls styled by Ayfer Deniz" loading="lazy" style="object-position: 50% 15%;">
-            <span class="lookbook-badge">Runway</span>
-            <div class="lookbook-overlay">
-              <h3>Runway Curls</h3>
-              <p>Model Gaby &middot; Photo &copy; 2016 Shawn Michael Lowe</p>
-            </div>
-          </div>
-
-          <!-- Photo: Ribboned Blonde -->
-          <div class="lookbook-item" tabindex="0" role="button" data-type="image" data-tags="blonde" data-src="assets/images/look-ribbon-blonde.webp" data-caption="Bright ribboned blonde highlights with long, swept layers">
-            <img src="assets/images/look-ribbon-blonde.webp" srcset="assets/images/look-ribbon-blonde-480.webp 480w, assets/images/look-ribbon-blonde-800.webp 800w, assets/images/look-ribbon-blonde.webp 1086w" sizes="(max-width: 600px) 88vw, (max-width: 1100px) 45vw, 400px" width="1086" height="1357" alt="Long blonde hair with bright ribboned highlights and soft root" loading="lazy" style="object-position: 50% 20%;">
-            <span class="lookbook-badge">Highlights</span>
-            <div class="lookbook-overlay">
-              <h3>Ribboned Blonde</h3>
-              <p>Bright Babylights &amp; Long Layers</p>
-            </div>
-          </div>
-
-          <!-- Photo 4: Caramel Brunette -->
-          <div class="lookbook-item" tabindex="0" role="button" data-type="image" data-tags="brunette" data-src="assets/images/look-caramel-brunette.webp" data-caption="Warm Espresso & Caramel Dimensional Blowout">
-            <img src="assets/images/look-caramel-brunette.webp" srcset="assets/images/look-caramel-brunette-480.webp 480w, assets/images/look-caramel-brunette-800.webp 800w, assets/images/look-caramel-brunette.webp 1102w" sizes="(max-width: 600px) 88vw, (max-width: 1100px) 45vw, 400px" width="1102" height="1400" alt="Warm espresso and caramel hair color" loading="lazy" />
-            <span class="lookbook-badge">Dimensional Brunette</span>
-            <div class="lookbook-overlay">
-              <h3>Espresso &amp; Warm Caramel</h3>
-              <p>Rich Multi-Dimensional Color</p>
-            </div>
-          </div>
-
-          <!-- Reel 1: Ayfer Styling in Tenafly -->
-          <div class="lookbook-item" tabindex="0" role="button" data-type="video" data-tags="video brunette cuts" data-src="assets/videos/reel-ayfer-styling.mp4" data-caption="Ayfer Deniz crafting a glass-shine brunette blowout & fringe at Artora Beauty Bar">
-            <video src="assets/videos/reel-ayfer-styling.mp4" data-poster="assets/images/posters/reel-ayfer-styling.webp" muted loop playsinline preload="none" data-autoplay></video>
-            <span class="lookbook-badge">Motion Reel</span>
-            <span class="video-sound-indicator" title="Click to expand">▶</span>
-            <div class="lookbook-overlay">
-              <h3>Ayfer Behind the Chair</h3>
-              <p>Silk Blowout &amp; Curtain Fringe</p>
-            </div>
-          </div>
-
-          <!-- Photo 2: Rose-Pearl Pixie -->
-          <div class="lookbook-item" tabindex="0" role="button" data-type="image" data-tags="cuts blonde" data-src="assets/images/look-rose-pearl-pixie.webp" data-caption="Sculpted Rose-Pearl Textured Pixie Cut">
-            <img src="assets/images/look-rose-pearl-pixie.webp" srcset="assets/images/look-rose-pearl-pixie-480.webp 480w, assets/images/look-rose-pearl-pixie-800.webp 800w, assets/images/look-rose-pearl-pixie.webp 1233w" sizes="(max-width: 600px) 88vw, (max-width: 1100px) 45vw, 400px" width="1233" height="1344" alt="Sculpted rose pearl pixie cut" loading="lazy" />
-            <span class="lookbook-badge">Precision Cut</span>
-            <div class="lookbook-overlay">
-              <h3>Rose-Pearl Textured Pixie</h3>
-              <p>Architectural Crop &amp; Pastel Gloss</p>
-            </div>
-          </div>
-
-          <!-- Photo 6: Platinum Sleek Lob -->
-          <div class="lookbook-item" tabindex="0" role="button" data-type="image" data-tags="blonde cuts" data-src="assets/images/look-platinum-lob.webp" data-caption="Sleek Pearl-Platinum Lob & Wispy Bangs">
-            <img src="assets/images/look-platinum-lob.webp" srcset="assets/images/look-platinum-lob-480.webp 480w, assets/images/look-platinum-lob-800.webp 800w, assets/images/look-platinum-lob.webp 1207w" sizes="(max-width: 600px) 88vw, (max-width: 1100px) 45vw, 400px" width="1207" height="1400" alt="Sleek platinum blonde lob haircut" loading="lazy" />
-            <span class="lookbook-badge">Precision Lob</span>
-            <div class="lookbook-overlay">
-              <h3>Pearl-Platinum Sleek Lob</h3>
-              <p>Razor-Sharp Line &amp; Silk Finish</p>
-            </div>
-          </div>
-
-          <!-- Reel 4: Sun-Kissed Blonde -->
-          <div class="lookbook-item" tabindex="0" role="button" data-type="video" data-tags="video blonde" data-src="assets/videos/reel-sunkissed-blonde.mp4" data-caption="Sun-kissed dimensional blonde blowout">
-            <video src="assets/videos/reel-sunkissed-blonde.mp4" data-poster="assets/images/posters/reel-sunkissed-blonde.webp" muted loop playsinline preload="none" data-autoplay></video>
-            <span class="lookbook-badge">Motion Reel</span>
-            <span class="video-sound-indicator" title="Click to expand">▶</span>
-            <div class="lookbook-overlay">
-              <h3>Golden Hour Balayage</h3>
-              <p>Soft Root Melt &amp; Lived-In Blonde</p>
-            </div>
-          </div>
-
-          <!-- Photo: Caramel Ribbons -->
-          <div class="lookbook-item" tabindex="0" role="button" data-type="image" data-tags="brunette" data-src="assets/images/look-caramel-ribbons.webp" data-caption="Caramel face-framing ribbons on rich brunette">
-            <img src="assets/images/look-caramel-ribbons.webp" srcset="assets/images/look-caramel-ribbons-480.webp 480w, assets/images/look-caramel-ribbons-800.webp 800w, assets/images/look-caramel-ribbons.webp 1074w" sizes="(max-width: 600px) 88vw, (max-width: 1100px) 45vw, 400px" width="1074" height="1342" alt="Brunette hair with warm caramel face-framing highlights" loading="lazy" style="object-position: 50% 25%;">
-            <span class="lookbook-badge">Face-Framing Color</span>
-            <div class="lookbook-overlay">
-              <h3>Caramel Ribbons</h3>
-              <p>Brunette with Warm Face-Framing Highlights</p>
-            </div>
-          </div>
-
-          <!-- Photo: Ayfer backstage -->
-          <div class="lookbook-item" tabindex="0" role="button" data-type="image" data-tags="cuts" data-src="assets/images/ayfer-backstage.webp" data-caption="Ayfer Deniz styling models backstage before a runway show">
-            <img src="assets/images/ayfer-backstage.webp" srcset="assets/images/ayfer-backstage-480.webp 480w, assets/images/ayfer-backstage-800.webp 800w, assets/images/ayfer-backstage.webp 1200w" sizes="(max-width: 600px) 88vw, (max-width: 1100px) 45vw, 400px" width="1200" height="1200" alt="Ayfer Deniz styling a model's hair backstage before a runway show" loading="lazy" style="object-position: 40% 50%;">
-            <span class="lookbook-badge">Backstage</span>
-            <div class="lookbook-overlay">
-              <h3>Ayfer Backstage</h3>
-              <p>Runway Prep &amp; Finishing</p>
-            </div>
-          </div>
-
-          <!-- Photo 5: Champagne Bob -->
-          <div class="lookbook-item" tabindex="0" role="button" data-type="image" data-tags="blonde cuts" data-src="assets/images/look-champagne-bob.webp" data-caption="Feathered Champagne Blonde Bob inside Artora Beauty Bar">
-            <img src="assets/images/look-champagne-bob.webp" srcset="assets/images/look-champagne-bob-480.webp 480w, assets/images/look-champagne-bob-800.webp 800w, assets/images/look-champagne-bob.webp 1126w" sizes="(max-width: 600px) 88vw, (max-width: 1100px) 45vw, 400px" width="1126" height="1400" alt="Champagne blonde layered bob" loading="lazy" />
-            <span class="lookbook-badge">Cut &amp; Color</span>
-            <div class="lookbook-overlay">
-              <h3>Feathered Champagne Bob</h3>
-              <p>Volume, Movement &amp; Bright Highlights</p>
-            </div>
-          </div>
-
-          <!-- Reel 3: Glossy Brunette Waves -->
-          <div class="lookbook-item" tabindex="0" role="button" data-type="video" data-tags="video brunette" data-src="assets/videos/reel-glossy-brunette.mp4" data-caption="Mirror-shine chestnut brunette waves in natural light">
-            <video src="assets/videos/reel-glossy-brunette.mp4" data-poster="assets/images/posters/reel-glossy-brunette.webp" muted loop playsinline preload="none" data-autoplay></video>
-            <span class="lookbook-badge">Motion Reel</span>
-            <span class="video-sound-indicator" title="Click to expand">▶</span>
-            <div class="lookbook-overlay">
-              <h3>Velvet Chestnut Waves</h3>
-              <p>Diamond Gloss &amp; Sculpted Movement</p>
-            </div>
-          </div>
-
-          <!-- Reel 2: Dimensional Waves Motion -->
-          <div class="lookbook-item" tabindex="0" role="button" data-type="video" data-tags="video blonde" data-src="assets/videos/reel-dimensional-waves.mp4" data-caption="Multi-tonal champagne and caramel ribbons in motion">
-            <video src="assets/videos/reel-dimensional-waves.mp4" data-poster="assets/images/posters/reel-dimensional-waves.webp" muted loop playsinline preload="none" data-autoplay></video>
-            <span class="lookbook-badge">Motion Reel</span>
-            <span class="video-sound-indicator" title="Click to expand">▶</span>
-            <div class="lookbook-overlay">
-              <h3>Multi-Tonal Ribbons</h3>
-              <p>Seamless Blonde &amp; Caramel Blend</p>
-            </div>
-          </div>
-
-          <!-- Photo 7: Honey Cascading Blowout -->
-          <div class="lookbook-item" tabindex="0" role="button" data-type="image" data-tags="blonde" data-src="assets/images/look-honey-blowout.webp" data-caption="Cascading Honey-Gold Layers & Signature Blowout">
-            <img src="assets/images/look-honey-blowout.webp" srcset="assets/images/look-honey-blowout-480.webp 480w, assets/images/look-honey-blowout-800.webp 800w, assets/images/look-honey-blowout.webp 1068w" sizes="(max-width: 600px) 88vw, (max-width: 1100px) 45vw, 400px" width="1068" height="1400" alt="Cascading honey blonde blowout" loading="lazy" />
-            <span class="lookbook-badge">Signature Blowout</span>
-            <div class="lookbook-overlay">
-              <h3>Cascading Honey Gold</h3>
-              <p>Seamless Highlights &amp; Bouncy Ends</p>
-            </div>
-          </div>
-
-          <!-- Reel 5: Espresso Silk -->
-          <div class="lookbook-item" tabindex="0" role="button" data-type="video" data-tags="video brunette" data-src="assets/videos/reel-espresso-silk.mp4" data-caption="Luminous copper-kissed espresso blowout">
-            <video src="assets/videos/reel-espresso-silk.mp4" data-poster="assets/images/posters/reel-espresso-silk.webp" muted loop playsinline preload="none" data-autoplay></video>
-            <span class="lookbook-badge">Motion Reel</span>
-            <span class="video-sound-indicator" title="Click to expand">▶</span>
-            <div class="lookbook-overlay">
-              <h3>Copper-Kissed Espresso</h3>
-              <p>Keratin Silk &amp; Radiant Shine</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Instagram banner (from index.html) -->
-        <div class="instagram-cta-bar reveal-on-scroll">
-          <div class="instagram-cta-text">
-            <h3>Follow <em>@artorabeautybar</em> on Instagram</h3>
-            <p>See daily client transformations, seasonal color inspiration, and behind-the-scenes moments from our Tenafly studio.</p>
-          </div>
-          <a href="https://www.instagram.com/artorabeautybar/" target="_blank" rel="noopener" class="btn-booking">Visit @artorabeautybar</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Visit & Sanctuary Hours -->
-    <section id="visit" class="section-padding">
-      <div class="container">
-        <div class="visit-card reveal-on-scroll">
-          
-          <div class="visit-info-pane">
-            <span class="section-eyebrow">Tenafly Sanctuary</span>
-            <h2 class="section-title" style="font-size: 2.2rem; margin-bottom: 2rem;">Upstairs on <em>Summit Street</em></h2>
-
-            <div class="info-group">
-              <h3>Address & Entry</h3>
+          <div class="visit-grid">
+            <div class="visit-block">
+              <h3>Address</h3>
               <address>
                 8 South Summit Street<br>
                 Side Entrance, 2nd Floor<br>
                 Tenafly, NJ 07670
               </address>
-              <p style="font-size: 0.8rem; color: var(--ink-muted); margin-top: 4px;">Walk up the private side stairwell to our 2nd floor studio.</p>
+              <p class="visit-note">Walk up the private side stairwell to our 2nd floor studio.</p>
             </div>
 
-            <div class="info-group">
-              <h3>Hours of Artistry</h3>
-              <table class="hours-table" aria-label="Studio Hours">
-                <tr><td>Tuesday – Thursday</td><td>10:00 AM – 6:00 PM</td></tr>
-                <tr><td>Friday</td><td>Closed</td></tr>
-                <tr><td>Saturday</td><td>9:30 AM – 6:00 PM</td></tr>
-                <tr><td>Sunday & Monday</td><td>Closed for Formulation</td></tr>
-              </table>
-            </div>
-
-            <div class="info-group">
-              <h3>Direct Contact</h3>
+            <div class="visit-block">
+              <h3>Contact</h3>
               <p>
-                Phone: <a href="tel:+12018461234" style="font-weight: 600;">(201) 846-1234</a><br>
-                Email: <a href="mailto:ayfer1@gmail.com">ayfer1@gmail.com</a><br>
-                Instagram: <a href="https://www.instagram.com/artorabeautybar/" target="_blank" rel="noopener">@artorabeautybar</a>
+                <a class="text-link" href="tel:+12018461234">(201) 846-1234</a><br>
+                <a class="text-link" href="mailto:ayfer1@gmail.com">ayfer1@gmail.com</a><br>
+                <a class="text-link" href="https://www.instagram.com/artorabeautybar/" target="_blank" rel="noopener">@artorabeautybar</a>
               </p>
             </div>
 
-            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-              <a href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener" class="btn-booking">
-                Book Now
-              </a>
-              <a href="https://maps.google.com/?q=8+South+Summit+Street+Tenafly+NJ+07670" target="_blank" rel="noopener" class="btn-outline">
-                Get Directions
-              </a>
+            <div class="visit-block visit-block--hours">
+              <h3>Hours <span class="open-status" id="openStatus" hidden></span></h3>
+              <table class="hours" aria-label="Studio hours">
+                <tr data-days="2 3 4"><td>Tuesday to Thursday</td><td>10:00 AM – 6:00 PM</td></tr>
+                <tr data-days="5"><td>Friday</td><td>Closed</td></tr>
+                <tr data-days="6"><td>Saturday</td><td>9:30 AM – 6:00 PM</td></tr>
+                <tr data-days="0 1"><td>Sunday and Monday</td><td>Closed</td></tr>
+              </table>
             </div>
           </div>
 
-          <div class="visit-visual-pane">
-            <img loading="lazy" decoding="async" src="assets/images/ayfer-portrait.webp" srcset="assets/images/ayfer-portrait-480.webp 480w, assets/images/ayfer-portrait-800.webp 800w, assets/images/ayfer-portrait.webp 1195w" sizes="(max-width: 600px) 88vw, (max-width: 992px) 94vw, 620px" width="1195" height="1399" alt="Artora Beauty Bar studio sanctuary">
-            <div class="visit-overlay-caption">
-              <h3>“See you upstairs in the chair.”</h3>
-              <p style="font-size: 0.88rem; color: #E0D8CE; margin-top: 4px;">An intimate sanctuary crafted for unhurried pampering.</p>
-            </div>
+          <div class="actions">
+            <a class="btn btn-solid" data-magnetic href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener">Book now</a>
+            <a class="btn btn-line" href="https://maps.google.com/?q=8+South+Summit+Street+Tenafly+NJ+07670" target="_blank" rel="noopener">Get directions</a>
           </div>
-
         </div>
+
+        <figure class="visit-photo" data-reveal="wipe">
+          <img data-parallax="0.06" loading="lazy" decoding="async" src="assets/images/ayfer-portrait.webp" srcset="assets/images/ayfer-portrait-480.webp 480w, assets/images/ayfer-portrait-800.webp 800w, assets/images/ayfer-portrait.webp 1195w" sizes="(max-width: 900px) 92vw, 520px" width="1195" height="1399" alt="Ayfer Deniz in her studio">
+          <figcaption>“See you upstairs in the chair.”</figcaption>
+        </figure>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-      <div class="brand-logo-wrap">
-        <img src="assets/images/logo-dark.png" alt="Artora Beauty Bar logo" width="438" height="229" class="brand-logo-img" style="filter: brightness(0) invert(1); opacity: 0.85;">
-        <div class="logo-text-wrap">
-          <span class="logo-title" style="color: #FAF7F2;">Artora</span>
-          <span class="logo-subtitle" style="color: #A39A91;">Beauty Bar • Tenafly, NJ</span>
-        </div>
-      </div>
-        <a class="ig-link footer-ig" href="https://www.instagram.com/artorabeautybar/" target="_blank" rel="noopener" title="Artora Beauty Bar on Instagram"><svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2.75" y="2.75" width="18.5" height="18.5" rx="5.25" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4.25" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17.35" cy="6.65" r="1.15" fill="currentColor"/></svg><span>@artorabeautybar</span></a>
-      </div>
-
-      <nav aria-label="Footer Links">
-        <div style="display: flex; gap: 1.75rem; flex-wrap: wrap; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.06em;">
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="shade shade--rose site-footer" data-tone="light" data-shade="Rose pearl gloss" data-level="10">
+    <div class="wrap">
+      <p class="footer-word" aria-hidden="true">Artora</p>
+      <div class="footer-grid">
+        <p class="footer-line">Beauty Bar by Ayfer Deniz<br>8 South Summit St, 2nd Floor, Tenafly, NJ 07670<br><a href="tel:+12018461234">(201) 846-1234</a></p>
+        <nav aria-label="Footer">
           <a href="#philosophy">Philosophy</a>
           <a href="#ayfer">Ayfer Deniz</a>
           <a href="#services">Services</a>
           <a href="#lookbook">Lookbook</a>
           <a href="#visit">Visit</a>
-          <a href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener" style="color: var(--accent-champagne);">Book Now</a>
-        </div>
-      </nav>
-    </div>
-
-    <div class="footer-bottom">
-      <div>8 South Summit St, 2nd Floor, Tenafly, NJ 07670<span class="hide-phone-portrait"> •</span> <a class="footer-phone" href="tel:+12018461234">(201) 846-1234</a></div>
-      <div>© <span id="currentYear"></span> Artora Beauty Bar. All rights reserved.</div>
+          <a href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener">Book now</a>
+        </nav>
+        <p class="footer-social">
+          <a href="https://www.instagram.com/artorabeautybar/" target="_blank" rel="noopener">@artorabeautybar</a>
+          <a href="https://www.instagram.com/ayfer_hair" target="_blank" rel="noopener">@ayfer_hair</a>
+        </p>
+      </div>
+      <p class="footer-legal">© <span id="currentYear">2026</span> Artora Beauty Bar. All rights reserved.</p>
     </div>
   </footer>
 
-  <aside aria-label="Book an appointment">
-  <!-- Floating Book Now pill (from index.html) -->
-    <a href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener" class="floating-book-cta" aria-label="Book Now on Vagaro">
-      <span>✦ Book Now</span>
-    </a>
-  </aside>
+  <!-- Floating Book badge -->
+  <a class="book-badge" id="bookBadge" href="https://www.vagaro.com/artorabeautybar/services" target="_blank" rel="noopener" aria-label="Book now on Vagaro">
+    <svg viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+      <defs><path id="badgeArc" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
+      <text><textPath href="#badgeArc" startOffset="0" textLength="270" lengthAdjust="spacing">Book now ✦ Book now ✦ Book now ✦</textPath></text>
+    </svg>
+    <span>Book</span>
+  </a>
 
-  <!-- Lookbook lightbox (from index.html) -->
-  <div class="modal-backdrop" id="lightboxModal" role="dialog" aria-modal="true" aria-labelledby="lightboxCaption">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 id="lightboxCaption">Artora Lookbook</h3>
-        <button type="button" class="modal-close" id="closeLightboxBtn" aria-label="Close preview">&times;</button>
-      </div>
-      <div class="modal-body" id="lightboxMediaWrap"></div>
+  <!-- Sound toggle -->
+  <button type="button" class="sound-toggle" id="soundToggle" aria-pressed="false">
+    <span class="sound-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    <span class="sound-label">Sound off</span>
+  </button>
+
+  <!-- Cursor label for the lookbook -->
+  <div class="cursor-tag" id="cursorTag" aria-hidden="true">View</div>
+
+  <!-- Lookbook viewer -->
+  <div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-label="Lookbook viewer" hidden>
+    <button type="button" class="viewer-close" id="viewerClose" aria-label="Close viewer">Close</button>
+    <button type="button" class="viewer-nav viewer-prev" id="viewerPrev" aria-label="Previous piece"><span aria-hidden="true"></span></button>
+    <div class="viewer-stage" id="viewerStage"></div>
+    <button type="button" class="viewer-nav viewer-next" id="viewerNext" aria-label="Next piece"><span aria-hidden="true"></span></button>
+    <div class="viewer-bar">
+      <p class="viewer-caption" id="viewerCaption" aria-live="polite"></p>
+      <p class="viewer-count" id="viewerCount"></p>
     </div>
   </div>
 
-  <script>
-    // 1. Dynamic Year
-    const year_element = document.getElementById('currentYear');
-    if (year_element) {
-      year_element.textContent = new Date().getFullYear();
-    }
-
-    // 2. Intersection Observer for Smooth Scroll Reveal
-    function initScrollReveal() {
-      const reveal_elements = document.querySelectorAll('.reveal-on-scroll');
-      const scroll_observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, {
-        threshold: 0.12,
-        rootMargin: "0px 0px -40px 0px"
-      });
-
-      reveal_elements.forEach(element => scroll_observer.observe(element));
-    }
-
-    // 3. Service Filter Tabs
-    function initServiceTabs() {
-      const tab_buttons = document.querySelectorAll('.tab-btn[data-category]');
-      const service_cards = document.querySelectorAll('.service-card');
-
-      tab_buttons.forEach(button => {
-        button.addEventListener('click', () => {
-          tab_buttons.forEach(btn => btn.classList.remove('active'));
-          button.classList.add('active');
-          const selected_category = button.getAttribute('data-category');
-          service_cards.forEach(card => {
-            const show = selected_category === 'all' || card.getAttribute('data-category') === selected_category;
-            card.style.display = show ? 'flex' : 'none';
-          });
-        });
-      });
-    }
-
-    // 4. Lookbook Filters + Lightbox
-    function initLookbook() {
-      const filter_buttons = document.querySelectorAll('.tab-btn[data-filter]');
-      const tiles = document.querySelectorAll('#lookbookGrid > *');
-      const items = document.querySelectorAll('#lookbookGrid .lookbook-item');
-      const modal = document.getElementById('lightboxModal');
-      const media_wrap = document.getElementById('lightboxMediaWrap');
-      const caption_el = document.getElementById('lightboxCaption');
-      const close_btn = document.getElementById('closeLightboxBtn');
-      let last_focus = null;
-
-      filter_buttons.forEach(button => {
-        button.addEventListener('click', () => {
-          filter_buttons.forEach(btn => btn.classList.remove('active'));
-          button.classList.add('active');
-          const filter = button.getAttribute('data-filter');
-          tiles.forEach(tile => {
-            const tags = (tile.getAttribute('data-tags') || '').split(' ');
-            tile.style.display = (filter === 'all' || tags.includes(filter)) ? '' : 'none';
-          });
-        });
-      });
-
-      function openItem(item) {
-        const type = item.getAttribute('data-type');
-        const src = item.getAttribute('data-src');
-        const caption = item.getAttribute('data-caption') || 'Artora Lookbook';
-        caption_el.textContent = caption;
-        media_wrap.innerHTML = '';
-        let el;
-        if (type === 'video') {
-          el = document.createElement('video');
-          Object.assign(el, { src, controls: true, autoplay: true, muted: true, loop: true, playsInline: true });
-        } else {
-          el = document.createElement('img');
-          el.src = src;
-          el.alt = caption;
-        }
-        media_wrap.appendChild(el);
-        last_focus = document.activeElement;
-        modal.classList.add('open');
-        close_btn.focus();
-      }
-
-      function closeLightbox() {
-        if (!modal.classList.contains('open')) return;
-        modal.classList.remove('open');
-        media_wrap.innerHTML = '';
-        if (last_focus) last_focus.focus();
-      }
-
-      items.forEach(item => {
-        item.addEventListener('click', () => openItem(item));
-        item.addEventListener('keydown', e => {
-          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openItem(item); }
-        });
-      });
-      close_btn.addEventListener('click', closeLightbox);
-      modal.addEventListener('click', e => { if (e.target === modal) closeLightbox(); });
-      window.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
-
-      // Play reels only while they are on screen
-      const reels = document.querySelectorAll('#lookbookGrid video');
-      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const video_observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          const v = entry.target;
-          if (entry.isIntersecting && !reduce) { const p = v.play(); if (p && p.catch) p.catch(() => {}); }
-          else v.pause();
-        });
-      }, { threshold: 0.25 });
-      reels.forEach(v => { v.removeAttribute('autoplay'); v.pause(); video_observer.observe(v); });
-    }
-
-    // 5. Lookbook videos: load and play only while on screen
-    function initLazyVideos() {
-      const videos = Array.from(document.querySelectorAll('video[data-autoplay]'));
-      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const visible = new Set();
-
-      // iOS only autoplays when the video is muted *and* inline, set as properties as well as attributes.
-      videos.forEach(v => {
-        v.muted = true;
-        v.defaultMuted = true;
-        v.playsInline = true;
-        v.setAttribute('muted', '');
-        v.setAttribute('playsinline', '');
-        v.setAttribute('webkit-playsinline', '');
-      });
-
-      function load(v) {
-        if (v.dataset.poster && !v.poster) v.poster = v.dataset.poster;
-        if (v.dataset.loaded) return;
-        v.dataset.loaded = '1';
-        v.preload = 'auto';
-        v.autoplay = !reduce;
-        v.load();
-      }
-
-      function start(v) {
-        if (reduce) return;
-        load(v);
-        const attempt = v.play();
-        if (attempt && attempt.catch) {
-          attempt.catch(err => {
-            if (err && err.name === 'NotAllowedError') { useImageFallback(v); return; }
-            // Not enough data yet on some iPhones: try again as soon as it can play.
-            v.addEventListener('canplay', () => { if (visible.has(v)) v.play().catch(() => {}); }, { once: true });
-          });
-        }
-      }
-
-      // iPhones in Low Power Mode or Low Data Mode block every video from autoplaying.
-      // Safari can still play a muted MP4 through an <img> tag, so swap it in when that happens.
-      function useImageFallback(v) {
-        if (v.dataset.fallback) return;
-        v.dataset.fallback = '1';
-        const img = document.createElement('img');
-        img.alt = '';
-        img.setAttribute('aria-hidden', 'true');
-        img.style.objectPosition = v.style.objectPosition;
-        img.onload = () => { v.replaceWith(img); };
-        img.src = v.currentSrc || v.getAttribute('src');
-      }
-
-      if (!('IntersectionObserver' in window)) {
-        videos.forEach(start);
-        return;
-      }
-
-      // Start downloading a little before a video scrolls into view.
-      const preloader = new IntersectionObserver(entries => {
-        entries.forEach(e => { if (e.isIntersecting) { load(e.target); preloader.unobserve(e.target); } });
-      }, { rootMargin: '300px 0px' });
-
-      // Play as soon as any part is on screen; pause when it leaves.
-      const player = new IntersectionObserver(entries => {
-        entries.forEach(({ target: v, isIntersecting }) => {
-          if (isIntersecting) { visible.add(v); start(v); }
-          else { visible.delete(v); v.pause(); }
-        });
-      }, { threshold: 0 });
-
-      videos.forEach(v => { preloader.observe(v); player.observe(v); });
-
-      // Fallback for phones that block autoplay (e.g. Low Power Mode): the first touch or scroll gesture unlocks playback.
-      const unlock = () => { visible.forEach(start); };
-      ['touchstart', 'touchend', 'click'].forEach(t => document.addEventListener(t, unlock, { once: true, passive: true }));
-    }
-
-    // 6. Welcome splash: "Ayfer Salon is now Artora Beauty Bar"
-    //    Shows only to visitors redirected from ayfersalon.com (?from=ayfersalon or referrer).
-    //    Set WELCOME_ALWAYS = true to preview it on every load.
-    const WELCOME_ALWAYS = false;
-    function initWelcomeSplash() {
-      const splash = document.getElementById('welcomeSplash');
-      if (!splash) return;
-      const params = new URLSearchParams(location.search);
-      const fromOldSite = params.get('from') === 'ayfersalon' || /ayfersalon\.com/i.test(document.referrer);
-      if (!WELCOME_ALWAYS && !fromOldSite) return;
-
-      // Tidy the address bar so the ?from= tag isn't bookmarked or shared
-      if (params.has('from')) {
-        params.delete('from');
-        const q = params.toString();
-        history.replaceState(null, '', location.pathname + (q ? '?' + q : '') + location.hash);
-      }
-
-      const closeBtn = document.getElementById('welcomeClose');
-      const enterBtn = document.getElementById('welcomeEnter');
-      let lastFocus = document.activeElement;
-
-      function close() {
-        splash.classList.remove('open');
-        document.body.classList.remove('welcome-locked');
-        setTimeout(() => { splash.hidden = true; }, 500);
-        if (lastFocus && lastFocus.focus) lastFocus.focus();
-        document.removeEventListener('keydown', onKey);
-      }
-      function onKey(e) {
-        if (e.key === 'Escape') close();
-        if (e.key === 'Tab') {
-          const f = splash.querySelectorAll('button, a[href]');
-          const first = f[0], last = f[f.length - 1];
-          if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
-          else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
-        }
-      }
-
-      splash.hidden = false;
-      document.body.classList.add('welcome-locked');
-      requestAnimationFrame(() => requestAnimationFrame(() => splash.classList.add('open')));
-      enterBtn.focus({ preventScroll: true });
-      closeBtn.addEventListener('click', close);
-      enterBtn.addEventListener('click', close);
-      splash.addEventListener('click', e => { if (e.target === splash) close(); });
-      document.addEventListener('keydown', onKey);
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      initWelcomeSplash();
-      initScrollReveal();
-      initServiceTabs();
-      initLookbook();
-      initLazyVideos();
-    });
-  </script>
+  <script src="js/site.js" defer></script>
 </body>
 </html>

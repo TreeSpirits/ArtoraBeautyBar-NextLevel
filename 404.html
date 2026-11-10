@@ -5,51 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Page Not Found | Artora Beauty Bar, Tenafly NJ</title>
   <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#1B100A">
   <link rel="icon" type="image/png" href="/assets/images/favicon.png">
   <style>
-    @font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 400; font-display: swap; src: url(/fonts/cormorant-garamond-latin-400-normal.woff2) format('woff2'); }
-    @font-face { font-family: 'Cormorant Garamond'; font-style: italic; font-weight: 400; font-display: swap; src: url(/fonts/cormorant-garamond-latin-400-italic.woff2) format('woff2'); }
-    @font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400; font-display: swap; src: url(/fonts/plus-jakarta-sans-latin-400-normal.woff2) format('woff2'); }
-    @font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 600; font-display: swap; src: url(/fonts/plus-jakarta-sans-latin-600-normal.woff2) format('woff2'); }
-    :root { --bg: #FAF7F2; --ink: #191412; --ink-2: #5C534E; --accent: #A6865A; --accent-ink: #7D603A; --sand: #E7DFD3; }
+    @font-face { font-family: 'Bodoni Moda'; font-style: normal; font-weight: 400 900; font-display: swap; src: url(/fonts/bodoni-moda-latin-opsz-normal.woff2) format('woff2'); }
+    @font-face { font-family: 'Jost'; font-style: normal; font-weight: 100 900; font-display: swap; src: url(/fonts/jost-latin-wght-normal.woff2) format('woff2'); }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      min-height: 100vh; display: flex; align-items: center; justify-content: center;
-      padding: 1.5rem; background: var(--bg); color: var(--ink);
-      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; text-align: center;
+      min-height: 100vh; min-height: 100svh; display: grid; place-items: center; padding: 2rem 1.25rem;
+      background: radial-gradient(120% 90% at 50% 35%, #2C1B12 0, #1B100A 60%, #120A06 100%);
+      color: #F7EDDD; font-family: 'Jost', 'Futura', system-ui, sans-serif; font-size: 1.125rem; line-height: 1.6; text-align: center;
+      -webkit-font-smoothing: antialiased;
     }
-    main {
-      width: min(520px, 100%); background: #FFF; border: 1px solid var(--sand);
-      border-radius: 200px 200px 8px 8px; padding: 3.5rem 2rem 2.5rem;
+    main { width: min(40rem, 100%); }
+    .word {
+      font-family: 'Bodoni Moda', 'Didot', Georgia, serif; font-weight: 900; font-size: clamp(6rem, 30vw, 14rem); line-height: 0.8; letter-spacing: -0.02em;
+      background: linear-gradient(100deg, #5A311D 0 30%, #D2A56A 46%, #FFF3DC 50%, #D2A56A 54%, #5A311D 70% 100%);
+      background-size: 300% 100%; -webkit-background-clip: text; background-clip: text; color: transparent;
+      animation: glint 5s ease-in-out infinite alternate; padding-bottom: 0.08em;
     }
-    img { width: 96px; height: auto; margin-bottom: 1.5rem; }
-    .eyebrow { display: block; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent-ink); margin-bottom: 0.8rem; }
-    h1 { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; font-size: clamp(2rem, 6vw, 2.6rem); line-height: 1.15; margin-bottom: 1rem; }
-    h1 em { color: var(--accent-ink); }
-    p { color: var(--ink-2); line-height: 1.7; margin-bottom: 1.75rem; }
+    @keyframes glint { from { background-position: 100% 0; } to { background-position: 0% 0; } }
+    @media (prefers-reduced-motion: reduce) { .word { animation: none; background-position: 50% 0; } }
+    h1 { font-family: 'Bodoni Moda', 'Didot', Georgia, serif; font-weight: 500; font-size: clamp(2rem, 6vw, 3rem); line-height: 1.1; letter-spacing: -0.015em; margin: 1.5rem 0 1rem; }
+    p { color: rgba(247, 237, 221, 0.74); margin-bottom: 2rem; }
     .actions { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
     a.btn {
-      display: inline-block; padding: 0.95rem 1.6rem; border-radius: 999px; text-decoration: none;
-      font-size: 0.76rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
-      border: 1px solid var(--ink); background: var(--ink); color: #FAF7F2;
+      display: inline-flex; align-items: center; min-height: 3.25rem; padding: 0 1.75rem; border-radius: 2px; text-decoration: none;
+      font-weight: 500; letter-spacing: 0.03em; border: 1px solid #E6B97E; background: #E6B97E; color: #1B100A; transition: background-color 0.3s, color 0.3s, border-color 0.3s;
     }
-    a.btn.ghost { background: transparent; color: var(--ink); border-color: var(--sand); }
-    a.btn:hover { background: var(--accent); border-color: var(--accent); color: #FFF; }
-    .contact { margin-top: 2rem; font-size: 0.85rem; color: var(--ink-2); }
-    .contact a { color: var(--ink); font-weight: 600; text-decoration: none; }
+    a.btn.line { background: transparent; color: #F7EDDD; border-color: rgba(247, 237, 221, 0.25); }
+    a.btn:hover, a.btn:focus-visible { background: #F7EDDD; border-color: #F7EDDD; color: #1B100A; }
+    a:focus-visible { outline: 2px solid #E6B97E; outline-offset: 3px; }
+    .contact { margin: 2.5rem 0 0; font-size: 1rem; }
+    .contact a { color: #F7EDDD; text-decoration: underline; text-decoration-color: #E6B97E; text-underline-offset: 0.2em; }
   </style>
 </head>
 <body>
   <main>
-    <img src="/assets/images/logo-dark.png" alt="Artora Beauty Bar logo" width="438" height="229">
-    <span class="eyebrow">Page not found</span>
-    <h1>This page has <em>moved on.</em></h1>
-    <p>The page you're looking for isn't here, but Ayfer is. Everything you need is on our homepage.</p>
+    <div class="word" aria-hidden="true">404</div>
+    <h1>This page has moved on.</h1>
+    <p>The page you're looking for isn't here, but Ayfer is. Everything you need is on the homepage.</p>
     <div class="actions">
-      <a class="btn" href="/">Visit Homepage</a>
-      <a class="btn ghost" href="https://www.vagaro.com/artorabeautybar/services" rel="noopener">Book Now</a>
+      <a class="btn" href="/">Go to the homepage</a>
+      <a class="btn line" href="https://www.vagaro.com/artorabeautybar/services" rel="noopener">Book now</a>
     </div>
-    <p class="contact">8 South Summit St, 2nd Floor, Tenafly, NJ &bull; <a href="tel:+12018461234">(201) 846-1234</a></p>
+    <p class="contact">8 South Summit St, 2nd Floor, Tenafly, NJ<br><a href="tel:+12018461234">(201) 846-1234</a></p>
   </main>
 </body>
 </html>
